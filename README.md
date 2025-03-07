@@ -13,5 +13,3 @@ Cannot commit directly to Master branch. Clone an instance of master before impl
   - `npm install`
 - Start dev environment: _(See changes live on your localhost)_
   - `npm run dev`
-
-    
