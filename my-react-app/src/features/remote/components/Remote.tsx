@@ -38,6 +38,9 @@ const useStyles = makeStyles(() => ({
     height: 100, 
     padding: 10,
     right: 45,
+    '& svg': {  
+      fontSize: 70,
+    }
   },
   backButton: {
     position: 'absolute',
