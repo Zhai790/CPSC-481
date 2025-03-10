@@ -1,0 +1,76 @@
+/* Page Container: Center everything */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height of the viewport */
+    position: relative;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Back Button: Positioned at the top right */
+  .back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Welcome Message: Space above the image */
+  .welcome-message {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Image Container: To display the image inside a big rectangle */
+  .image-container {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Image: To fit inside the container */
+  .image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Button Container: Positioned beneath the image */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  /* Button Styling: Small rectangle buttons */
+  .button {
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #218838;
+  }
