@@ -13,6 +13,10 @@ const ParentHome = () => {
   const handleSettingsButtonClick = () => {
     navigate('/settings'); // Navigate to the Welcome page (root path)
   };
+
+  const handleInsightsButtonClick = () => {
+    navigate('/insights'); // Navigate to the Welcome page (root path)
+  };
     return (
       <div className="page-container">
       {/* Back Button */}
@@ -28,7 +32,7 @@ const ParentHome = () => {
 
       {/* Buttons */}
       <div className="button-container">
-        <button className="button">Insights</button>
+        <button onClick={handleInsightsButtonClick} className="button">Insights</button>
         <button onClick={handleSettingsButtonClick} className="button">Settings</button>
         <button className="button">Notifications</button>
       </div>

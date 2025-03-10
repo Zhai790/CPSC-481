@@ -28,7 +28,7 @@ const Settings = () => {
   };
 
   const handleGeneralSettingsClick = () => {
-    alert("General settings will be here.");
+    navigate('/general-settings'); // Navigate to the general settings page
   };
 
   return (
