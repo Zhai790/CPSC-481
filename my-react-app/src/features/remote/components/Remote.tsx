@@ -29,7 +29,7 @@ const useStyles = makeStyles(() => ({
     position: 'absolute',
     top: 8,
     width: 75,
-    height: 75  ,
+    height: 75,
   },
   powerButton: {
     position: 'absolute',
@@ -37,24 +37,40 @@ const useStyles = makeStyles(() => ({
     width: 100,  
     height: 100, 
     padding: 10,
+    right: 45,
   },
   backButton: {
     position: 'absolute',
     top: 110,
+    width: 75,
+    height: 75,
+    fontsize: 100,
+    '& svg': {  
+      fontSize: 60,
+    },
+    right: '20%',
   },
   audioControls: {
     position: 'absolute',
-    top: 110,
+    top: 120,
     right: 40,
     display: 'flex',
     flexDirection: 'column',
-    gap: 8,
+    gap: 25,
+    width: 75,
+    '& svg': {  
+      fontSize: 40,
+    }
   },
   homeButton: {
     position: 'absolute',
-    top: 200,
-    left: '8%',
-    transform: 'translateX(-50%)',
+    top: 35,
+    width: 75,
+    height: 75,
+    left: '20%',
+    '& svg': {  
+      fontSize: 40,
+    }
   },
   touchpadContainer: {
     position: 'absolute',
@@ -71,7 +87,6 @@ const useStyles = makeStyles(() => ({
     cursor: 'pointer',
   },
   fingerprintIcon: {
-    fontSize: 40,
     opacity: 0.7,
   },
 }));
@@ -102,7 +117,7 @@ export default function Remote() {
 
       {/* Back Button */}
       <IconButton className={classes.backButton} onClick={handleBack}>
-        <BackIcon />
+        <BackIcon/>
       </IconButton>
 
       {/* Audio Controls (Volume Up/Down) */}
