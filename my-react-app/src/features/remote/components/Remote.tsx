@@ -25,6 +25,16 @@ const useStyles = makeStyles(() => ({
     paddingTop: 8,
     boxSizing: 'border-box',
   },
+  buttonBase: {
+    position: 'absolute',
+    borderRadius: '50%',
+    border: '2px solid rgba(0, 0, 255, 0.6)', // Always visible outline
+    boxShadow: '0 0 5px rgba(0, 0, 255, 0.8)', // Optional glowing effect
+    transition: 'box-shadow 0.3s ease-in-out',
+    '&:hover': {
+      boxShadow: '0 0 10px rgba(0, 0, 255, 1)', // Slightly more glow on hover
+    }
+  },
   micButton: {
     position: 'absolute',
     top: 8,
@@ -38,6 +48,9 @@ const useStyles = makeStyles(() => ({
     height: 100, 
     padding: 10,
     right: 45,
+    '& svg': {  
+      fontSize: 70,
+    }
   },
   backButton: {
     position: 'absolute',
@@ -106,32 +119,32 @@ export default function Remote() {
   return (
     <Box className={classes.remoteContainer}>
       {/* Mic Button */}
-      <IconButton className={classes.micButton} onClick={handleMic}>
+      <IconButton className={`${classes.buttonBase} ${classes.micButton}`} onClick={handleMic}>
         <MicIcon />
       </IconButton>
 
       {/* Power Button */}
-      <IconButton className={classes.powerButton} onClick={handlePower}>
+      <IconButton className={`${classes.buttonBase} ${classes.powerButton}`} onClick={handlePower}>
         <PowerIcon />
       </IconButton>
 
       {/* Back Button */}
-      <IconButton className={classes.backButton} onClick={handleBack}>
+      <IconButton className={`${classes.buttonBase} ${classes.backButton}`} onClick={handleBack}>
         <BackIcon/>
       </IconButton>
 
       {/* Audio Controls (Volume Up/Down) */}
       <Box className={classes.audioControls}>
-        <IconButton onClick={handleVolumeUp}>
+        <IconButton className={classes.buttonBase} onClick={handleVolumeUp}>
           <VolumeUpIcon />
         </IconButton>
-        <IconButton onClick={handleVolumeDown}>
+        <IconButton className={classes.buttonBase} onClick={handleVolumeDown}>
           <VolumeDownIcon />
         </IconButton>
       </Box>
 
       {/* Home Button */}
-      <IconButton className={classes.homeButton} onClick={handleHome}>
+      <IconButton className={`${classes.buttonBase} ${classes.homeButton}`} onClick={handleHome}>
         <HomeIcon />
       </IconButton>
 
