@@ -22,10 +22,10 @@ const ParentHome = () => {
       {/* Back Button */}
       <button onClick={handleBackButtonClick} className="back-button">Back</button>
 
-      {/* Welcome message */}
+      {/*welcome message */}
       <h1 className="welcome-message">Welcome Parent_Name</h1>
 
-      {/* Image Container */}
+      {/*image Container */}
       <div className="image-container">
         <img src="src/assets/360_F_130365758_ETX4W9NYSmhfO8NGnlaHmFkC1Q0osrSx.webp" alt="Main" className="image" />
       </div>

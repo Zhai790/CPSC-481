@@ -1,4 +1,4 @@
-/* Page Container: Center everything */
+/* page Container: Center everything */
 .page-container {
     display: flex;
     flex-direction: column;
@@ -28,13 +28,13 @@
     background-color: #0056b3;
   }
   
-  /* Welcome Message: Space above the image */
+  /* welcome Message*/
   .welcome-message {
     font-size: 24px;
     margin-bottom: 20px;
   }
   
-  /* Image Container: To display the image inside a big rectangle */
+  /* image Container to display the image */
   .image-container {
     width: 80%;
     max-width: 600px;
@@ -44,14 +44,14 @@
     overflow: hidden;
   }
   
-  /* Image: To fit inside the container */
+  /* Image */
   .image {
     width: 100%;
     height: auto;
     display: block;
   }
   
-  /* Button Container: Positioned beneath the image */
+  /* button Container: Positioned beneath the image */
   .button-container {
     display: flex;
     justify-content: space-between;
@@ -59,7 +59,7 @@
     max-width: 600px;
   }
   
-  /* Button Styling: Small rectangle buttons */
+  /* button Styling: Small rectangle buttons */
   .button {
     width: 30%;
     padding: 10px;

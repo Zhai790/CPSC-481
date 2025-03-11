@@ -1,12 +1,12 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Insights.css';
 
 const InsightsPage = () => {
   const navigate = useNavigate();
 
-  // Navigation logic for the back button
+  // navigation logic for the back button
   const handleBackButtonClick = () => {
-    navigate('/parent-home'); // Navigate to the parent-home page
+    navigate('/parent-home'); 
   };
 
   //help button produces an alert message
@@ -15,22 +15,22 @@ const InsightsPage = () => {
   };
 
   return (
-    <div style={containerStyle}>
+    <div className="container">
       {/* Back Button */}
-      <button onClick={handleBackButtonClick} style={{ ...buttonStyle, left: '20px' }}>
+      <button onClick={handleBackButtonClick} className="button">
         Back
       </button>
 
       {/* Help Button */}
-      <button onClick={handleHelpButtonClick} style={{ ...buttonStyle, right: '20px' }}>
+      <button onClick={handleHelpButtonClick} className="button">
         Help
       </button>
 
-      {/* Header */}
-      <h1 style={headerStyle}>Insights</h1>
+      {/* header */}
+      <h1 className="header">Insights</h1>
 
-      {/* Insights Table */}
-      <table style={tableStyle}>
+      {/* insights Table, to be modified further */}
+      <table className="table">
         <thead>
           <tr>
             <th>Attribute</th>
@@ -64,37 +64,5 @@ const InsightsPage = () => {
   );
 };
 
-// Styles for the component
-const containerStyle: React.CSSProperties = {
-  padding: '2rem',
-  textAlign: 'center',
-  position: 'relative',
-};
-
-const buttonStyle: React.CSSProperties = {
-  position: 'absolute',
-  top: '20px',
-  padding: '0.6rem 1.2rem',
-  fontSize: '1rem',
-  backgroundColor: '#1a1a1a',
-  color: 'white',
-  border: 'none',
-  borderRadius: '8px',
-  cursor: 'pointer',
-};
-
-const headerStyle: React.CSSProperties = {
-  marginBottom: '2rem',
-  fontSize: '2rem',
-};
-
-const tableStyle: React.CSSProperties = {
-  width: '80%',
-  margin: '0 auto',
-  borderCollapse: 'collapse',
-  textAlign: 'left',
-  backgroundColor: '#fff',
-  color: '#000',
-};
 
 export default InsightsPage;

@@ -4,17 +4,17 @@ import { useNavigate } from 'react-router-dom';
 const Settings = () => {
   const navigate = useNavigate();
 
-  // Navigation logic for the back button
+  //navigation logic for the back button
   const handleBackButtonClick = () => {
-    navigate('/parent-home'); // Navigate to the Welcome page
+    navigate('/parent-home'); //navigate to the Welcome page
   };
 
-  // Navigation logic for the help button
+  // navigation logic for the help button
   const handleHelpButtonClick = () => {
     alert("This is the help page. You can configure your settings here.");
   };
 
-  // Button click handlers for each of the settings options
+  // button click handlers for each of the settings options(3 to be added)
   const handleContentFilteringClick = () => {
     alert("Content Filtering settings will be here.");
   };
@@ -28,7 +28,7 @@ const Settings = () => {
   };
 
   const handleGeneralSettingsClick = () => {
-    navigate('/general-settings'); // Navigate to the general settings page
+    navigate('/general-settings'); //navigate to the general settings page
   };
 
   return (
@@ -71,7 +71,7 @@ const Settings = () => {
   );
 };
 
-// Button styling reused for all buttons
+//button styling reused for all buttons
 const buttonStyle: React.CSSProperties = {
   padding: '1rem 2rem',
   fontSize: '1.2rem',
