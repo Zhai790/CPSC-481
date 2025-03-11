@@ -75,7 +75,7 @@ const SecurityPage = () => {
     <button
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
-      className="fingerprint-button"
+      className="fingerprint-button" 
     >
     </button>
 

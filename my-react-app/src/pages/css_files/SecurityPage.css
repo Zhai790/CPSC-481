@@ -28,7 +28,7 @@
   .fingerprint-button {
     padding: 2rem;
     font-size: 2rem;
-    background: url('../assets/fingerprint-icon.webp') no-repeat center center;
+    background: url('src/assets/fingerprint-icon.webp') no-repeat center center;
     background-size: cover;
     width: 200px;
     height: 200px;
