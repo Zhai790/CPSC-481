@@ -72,6 +72,8 @@ const SecurityPage = () => {
       Help
     </button>
 
+    <h1 className="header">Please Hold Touchpad To Unlock</h1>
+
     <button
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
