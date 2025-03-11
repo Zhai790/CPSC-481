@@ -1,0 +1,54 @@
+.container {
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  .back-button,
+  .help-button {
+    position: absolute;
+    top: 20px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .back-button {
+    left: 20px;
+  }
+  
+  .help-button {
+    right: 20px;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .button-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .settings-button {
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .settings-button:hover {
+    background-color: #666;
+  }
