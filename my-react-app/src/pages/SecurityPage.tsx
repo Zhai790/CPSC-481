@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import "./SecurityPage.css"; 
+import "/src/pages/css_files/SecurityPage.css"; 
 
 const SecurityPage = () => {
   const navigate = useNavigate();

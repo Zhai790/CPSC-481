@@ -1,5 +1,5 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import '/src/pages/css_files/Settings.css';
 
 const Settings = () => {
   const navigate = useNavigate();
@@ -32,58 +32,28 @@ const Settings = () => {
   };
 
   return (
-    <div style={{ padding: '2rem', textAlign: 'center', position: 'relative' }}>
-      {/* Back Button */}
-      <button
-        onClick={handleBackButtonClick}
-        style={{ position: 'absolute', top: '20px', left: '20px' }}
-      >
-        Back
-      </button>
+    <div className="container">
+      <button onClick={handleBackButtonClick} className="back-button">Back</button>
+      <button onClick={handleHelpButtonClick} className="help-button">Help</button>
 
-      {/* Help Button */}
-      <button
-        onClick={handleHelpButtonClick}
-        style={{ position: 'absolute', top: '20px', right: '20px' }}
-      >
-        Help
-      </button>
+      <h1 className="header">Settings</h1>
 
-      {/* Header */}
-      <h1>Settings</h1>
-
-      {/* Buttons for the settings options */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '5rem' }}>
-        <button onClick={handleContentFilteringClick} style={buttonStyle}>
+      <div className="button-container">
+        <button onClick={handleContentFilteringClick} className="button">
           Content Filtering
         </button>
-        <button onClick={handleTimeLimitSettingsClick} style={buttonStyle}>
+        <button onClick={handleTimeLimitSettingsClick} className="button">
           Time Limit Settings
         </button>
-        <button onClick={handleSubscriptionsClick} style={buttonStyle}>
+        <button onClick={handleSubscriptionsClick} className="button">
           Subscriptions
         </button>
-        <button onClick={handleGeneralSettingsClick} style={buttonStyle}>
+        <button onClick={handleGeneralSettingsClick} className="button">
           General Settings
         </button>
       </div>
     </div>
   );
-};
-
-//button styling reused for all buttons
-const buttonStyle: React.CSSProperties = {
-  padding: '1rem 2rem',
-  fontSize: '1.2rem',
-  margin: '1rem',
-  backgroundColor: '#1a1a1a',
-  color: 'white',
-  border: 'none',
-  borderRadius: '8px',
-  cursor: 'pointer',
-  transition: 'background-color 0.3s ease',
-  width: '80%',
-  maxWidth: '400px',
 };
 
 export default Settings;

@@ -1,4 +1,4 @@
-import "./ParentHome.css"; 
+import "/src/pages/css_files/ParentHome.css"; 
 import { useNavigate } from 'react-router-dom';
 
 
