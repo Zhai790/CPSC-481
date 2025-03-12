@@ -10,6 +10,11 @@ const ParentHome = () => {
     navigate('/'); // Navigate to the Welcome page (root path)
   };
 
+  const handleHelpButtonClick = () => {
+    alert("This is the parent home page. You can configure your settings here.");
+  };
+
+
   const handleSettingsButtonClick = () => {
     navigate('/settings'); // Navigate to the Welcome page (root path)
   };
@@ -18,9 +23,11 @@ const ParentHome = () => {
     navigate('/insights'); // Navigate to the Welcome page (root path)
   };
     return (
-      <div className="page-container">
+    <div className="page-container">
       {/* Back Button */}
       <button onClick={handleBackButtonClick} className="back-button">Back</button>
+
+      <button onClick={handleHelpButtonClick} className="help-button">Help</button>
 
       {/*welcome message */}
       <h1 className="welcome-message">Welcome Parent_Name</h1>
