@@ -1,0 +1,1 @@
+Store images, icons, or other static files here

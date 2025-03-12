@@ -1,0 +1,76 @@
+/* page Container: Center everything */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height of the viewport */
+    position: relative;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Back Button: Positioned at the top right */
+  .back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* welcome Message*/
+  .welcome-message {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* image Container to display the image */
+  .image-container {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Image */
+  .image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* button Container: Positioned beneath the image */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  /* button Styling: Small rectangle buttons */
+  .button {
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #218838;
+  }

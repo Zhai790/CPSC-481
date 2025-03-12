@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Box } from '@mui/material';
 
-function App() {
-  const [count, setCount] = useState(0)
+import Welcome from "./pages/Welcome";
+import ParentHome from "./pages/ParentHome";
+import SecurityPage from './pages/SecurityPage';
+import Settings from './pages/Settings';
+import InsightsPage from './pages/InsightsPage';
+import GeneralSettingsPage from "./pages/GeneralSettingsPage";
 
+import Remote from './features/remote/components/Remote';
+// import TVScreen from './features/tv/components/TVScreen';
+
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      <Box sx={{ display: 'flex', height: '100vh' }}>
+        {/* Left Column: Remote UI */}
+        <Box
+          sx={{
+            flex: 1,
+            borderRight: '1px solid #ccc',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Remote />
+        </Box>
 
-export default App
+        {/* Right Column: TV Screen UI */}
+        <Box
+          sx={{
+            flex: 3,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          {/* Routes for different screens */}
+          <Routes>
+            <Route path="/" element={<Welcome />} />
+            <Route path="/security" element={<SecurityPage />} />
+            <Route path="/parent-home" element={<ParentHome />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/insights" element={<InsightsPage />} />
+            <Route path="/general-settings" element={<GeneralSettingsPage />} />
+          </Routes>
+        </Box>
+      </Box>
+    </Router>
+  );
+}
