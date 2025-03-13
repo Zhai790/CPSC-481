@@ -7,6 +7,7 @@ import SecurityPage from './pages/SecurityPage';
 import Settings from './pages/Settings';
 import InsightsPage from './pages/InsightsPage';
 import GeneralSettingsPage from "./pages/GeneralSettingsPage";
+import KidsHome from "./pages/KidsHome";
 
 import Remote from './features/remote/components/Remote';
 // import TVScreen from './features/tv/components/TVScreen';
@@ -45,6 +46,7 @@ export default function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/insights" element={<InsightsPage />} />
             <Route path="/general-settings" element={<GeneralSettingsPage />} />
+            <Route path="/kids-home" element={<KidsHome />} />
           </Routes>
         </Box>
       </Box>
