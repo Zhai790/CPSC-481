@@ -22,8 +22,33 @@ const ParentHome = () => {
       {/* Back Button */}
       <button onClick={handleBackButtonClick} className="back-button">Back</button>
 
+<<<<<<< Updated upstream
       {/* Welcome message */}
       <h1 className="welcome-message">Welcome Parent_Name</h1>
+=======
+      {/* Bottom Navigation */}
+      <Box className="bottom-nav" sx={{ marginTop: '2rem', display: 'flex', gap: '2rem' }}>
+        {/* FAV Button with Vertical Layout */}
+        <Button
+          variant="outlined"
+          sx={{
+            borderColor: '#FFD700',     // Gold outline
+            color: '#2AFF00',           // Gold color for icon and text
+            display: 'flex',
+            flexDirection: 'column',    // Stack icon above text
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '4rem',
+            fontSize: '4rem',
+          }}
+          onClick={() => navigate('/child/favourites')}  // Navigate to Favourites page
+        >
+          <StarIcon sx={{ fontSize: '5rem' }} />
+          <Typography sx={{ fontSize: '1rem', marginTop: '0.5rem' }}>
+            Fav
+          </Typography>
+        </Button>
+>>>>>>> Stashed changes
 
       {/* Image Container */}
       <div className="image-container">
