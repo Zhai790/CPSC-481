@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import '/src/pages/css_files/Settings.css';
+import './css_files/Settings.css';
 
 const Settings = () => {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ const Settings = () => {
 
   // navigation logic for the help button
   const handleHelpButtonClick = () => {
-    alert("This is the help page. You can configure your settings here.");
+    navigate("/time-limit"); //navigate to time limit screen
   };
 
   // button click handlers for each of the settings options(3 to be added)
@@ -20,7 +20,7 @@ const Settings = () => {
   };
 
   const handleTimeLimitSettingsClick = () => {
-    alert("Time Limit settings will be here.");
+    navigate('/time-limit');
   };
 
   const handleSubscriptionsClick = () => {
@@ -42,7 +42,7 @@ const Settings = () => {
         <button onClick={handleContentFilteringClick} className="button">
           Content Filtering
         </button>
-        <button onClick={handleTimeLimitSettingsClick} className="button">
+        <button onClick={handleTimeLimitSettingsClick} className="button"> 
           Time Limit Settings
         </button>
         <button onClick={handleSubscriptionsClick} className="button">
