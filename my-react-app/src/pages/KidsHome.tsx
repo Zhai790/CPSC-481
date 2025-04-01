@@ -1,31 +1,54 @@
-import "./ParentHome.css"; 
+import React, { useState } from 'react';
+import { Box, Typography, Button } from '@mui/material';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import StarIcon from '@mui/icons-material/Star';
+import DownloadIcon from '@mui/icons-material/Download';
+import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from 'react-router-dom';
+import "./KidsHome.css";
 
+interface Show {
+  id: number;
+  title: string;
+}
 
-
-const ParentHome = () => {
+const ChildHome: React.FC = () => {
+  // Initialize navigation hook
   const navigate = useNavigate();
 
-  const handleBackButtonClick = () => {
-    navigate('/'); // Navigate to the Welcome page (root path)
-  };
+  
+  const recentShows: Show[] = [
+    { id: 1, title: 'Show 1' },
+    { id: 2, title: 'Show 2' },
+    { id: 3, title: 'Show 3' },
+    { id: 4, title: 'Show 4' },
+  ];
 
-  const handleSettingsButtonClick = () => {
-    navigate('/settings'); // Navigate to the Welcome page (root path)
-  };
+  return (
+    <Box className="child-home-container">
+      {/* Title */}
+      <Typography sx={{ fontSize: '3rem', fontWeight: 'bold' }}>
+        Recently Watched
+      </Typography>
 
-  const handleInsightsButtonClick = () => {
-    navigate('/insights'); // Navigate to the Welcome page (root path)
-  };
-    return (
-      <div className="page-container">
-      {/* Back Button */}
-      <button onClick={handleBackButtonClick} className="back-button">Back</button>
+      {/* Recently Watched Section */}
+      <Carousel
+        className="recently-watched-carousel"
+        showThumbs={false}
+        infiniteLoop={true}
+        showArrows={true}
+        showStatus={false}
+        swipeable={true}
+        emulateTouch={true}
+      >
+        {recentShows.map((show) => (
+          <Box key={show.id} className="recently-watched-box">
+            {show.title}
+          </Box>
+        ))}
+      </Carousel>
 
-<<<<<<< Updated upstream
-      {/* Welcome message */}
-      <h1 className="welcome-message">Welcome Parent_Name</h1>
-=======
       {/* Bottom Navigation */}
       <Box className="bottom-nav" sx={{ marginTop: '2rem', display: 'flex', gap: '2rem' }}>
         {/* FAV Button with Vertical Layout */}
@@ -33,7 +56,9 @@ const ParentHome = () => {
           variant="outlined"
           sx={{
             borderColor: '#FFD700',     // Gold outline
-            color: '#2AFF00',           // Gold color for icon and text
+
+            color: '#FFD700',           // Gold color for icon and text
+
             display: 'flex',
             flexDirection: 'column',    // Stack icon above text
             alignItems: 'center',
@@ -48,22 +73,18 @@ const ParentHome = () => {
             Fav
           </Typography>
         </Button>
->>>>>>> Stashed changes
 
-      {/* Image Container */}
-      <div className="image-container">
-        <img src="src/assets/360_F_130365758_ETX4W9NYSmhfO8NGnlaHmFkC1Q0osrSx.webp" alt="Main" className="image" />
-      </div>
 
-      {/* Buttons */}
-      <div className="button-container">
-        <button onClick={handleInsightsButtonClick} className="button">Insights</button>
-        <button onClick={handleSettingsButtonClick} className="button">Settings</button>
-        <button className="button">Notifications</button>
-      </div>
-    </div>
+        <Button variant="outlined" startIcon={<DownloadIcon />}>
+          Downloads
+        </Button>
+        <Button variant="outlined" startIcon={<SearchIcon />}>
+          Search
+        </Button>
+      </Box>
+    </Box>
+
   );
 };
 
-  
-  export default ParentHome;
+export default ChildHome;

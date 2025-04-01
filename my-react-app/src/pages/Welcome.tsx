@@ -10,7 +10,7 @@ export default function Welcome() {
       <p>Press the Kids button to start watching!</p>
 
       <div className="button-container">
-        <button className="kids-button">Kids</button>
+        <button className="kids-button" onClick={() => navigate("/kids-home")}>Kids</button>
         <button className="parents-button" onClick={() => navigate("/security")}>Parents</button>
       </div>
 
