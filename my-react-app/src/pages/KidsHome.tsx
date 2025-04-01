@@ -17,6 +17,7 @@ const ChildHome: React.FC = () => {
   // Initialize navigation hook
   const navigate = useNavigate();
 
+  
   const recentShows: Show[] = [
     { id: 1, title: 'Show 1' },
     { id: 2, title: 'Show 2' },
@@ -55,7 +56,9 @@ const ChildHome: React.FC = () => {
           variant="outlined"
           sx={{
             borderColor: '#FFD700',     // Gold outline
+
             color: '#FFD700',           // Gold color for icon and text
+
             display: 'flex',
             flexDirection: 'column',    // Stack icon above text
             alignItems: 'center',
@@ -71,6 +74,7 @@ const ChildHome: React.FC = () => {
           </Typography>
         </Button>
 
+
         <Button variant="outlined" startIcon={<DownloadIcon />}>
           Downloads
         </Button>
@@ -79,6 +83,7 @@ const ChildHome: React.FC = () => {
         </Button>
       </Box>
     </Box>
+
   );
 };
 
