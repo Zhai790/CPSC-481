@@ -3,6 +3,8 @@
     text-align: center;
     position: relative;
   }
+
+  
   
   .back-button,
   .help-button {
@@ -13,6 +15,7 @@
     color: white;
     border: none;
     border-radius: 8px;
+    min-width: 100px;
     cursor: pointer;
   }
   

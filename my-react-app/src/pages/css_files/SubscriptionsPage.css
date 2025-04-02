@@ -1,0 +1,88 @@
+.container {
+  min-height: 100vh;
+  background-color: #242424;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-box {
+  width: 80%;
+  max-width: 900px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.action-button {
+  background-color: #14b8a6;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.subscription-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+}
+
+.subscription-table th, .subscription-table td {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: left;
+}
+
+.subscription-table thead {
+  color: black;
+  background-color: #f3f4f6;
+}
+
+.inactive-status {
+  font-weight: bold;
+}
+
+.subscribe-link {
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.payment-info {
+  background: #f3f4f6;
+  color: black;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+}
+
+.payment-button {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
