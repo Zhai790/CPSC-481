@@ -11,7 +11,7 @@ import KidsHome from "./pages/KidsHome";
 import Favourites from './pages/Favourites';
 import Subscriptions from "./pages/SubscriptionsPage";
 import Remote from './features/remote/components/Remote';
-// import TVScreen from './features/tv/components/TVScreen';
+
 
 export default function App() {
   return (

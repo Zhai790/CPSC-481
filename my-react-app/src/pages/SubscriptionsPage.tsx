@@ -1,12 +1,30 @@
+import { useNavigate } from 'react-router-dom';
 import "/src/pages/css_files/SubscriptionsPage.css";
 
 const SubscriptionsPage = () => {
+
+  const navigate = useNavigate();
+
+  //navigation logic for the back button
+  const handleBackButtonClick = () => {
+    navigate('/settings'); //navigate to the Welcome page
+  };
+
+  // navigation logic for the help button
+  const handleHelpButtonClick = () => {
+    alert("This is the subscriptions page. You can configure your subscription settings here.");
+  };
+
+  const handlePaymentMethodClick = () => {
+    alert("Payment Method settings will be here.");
+  };
+
   return (
     <div className="container">
       <div className="content">
         <div className="button-container">
-          <button className="back-button">Back</button>
-          <button className="help-button">Help</button>
+          <button onClick={handleBackButtonClick} className="back-button">Back</button>
+          <button onClick={handleHelpButtonClick} className="help-button">Help</button>
         </div>
         
         <h1 className="header">Subscriptions</h1>
@@ -39,7 +57,7 @@ const SubscriptionsPage = () => {
           <p>Current Cost: 16.90$</p>
         </div>
         
-        <button className="payment-button">Change Payment Method</button>
+        <button onClick={handlePaymentMethodClick} className="payment-button">Change Payment Method</button>
       </div>
     </div>
   );

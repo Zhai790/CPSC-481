@@ -6,15 +6,15 @@ const Settings = () => {
 
   //navigation logic for the back button
   const handleBackButtonClick = () => {
-    navigate('/parent-home'); //navigate to the Welcome page
+    navigate('/parent-home'); //navigate to the parent home page
   };
 
   // navigation logic for the help button
   const handleHelpButtonClick = () => {
-    alert("This is the help page. You can configure your settings here.");
+    alert("This is the settings page. You can configure your settings here.");
   };
 
-  // button click handlers for each of the settings options(3 to be added)
+  // button click handlers for each of the settings options
   const handleContentFilteringClick = () => {
     alert("Content Filtering settings will be here.");
   };
@@ -24,7 +24,7 @@ const Settings = () => {
   };
 
   const handleSubscriptionsClick = () => {
-    alert("Subscription settings will be here.");
+    navigate('/subscriptions');
   };
 
   const handleGeneralSettingsClick = () => {
