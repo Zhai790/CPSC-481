@@ -1,4 +1,4 @@
-.container {
+.subscriptions-page .container {
   min-height: 100vh;
   background-color: #242424;
   padding: 2rem;
@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.content-box {
+.subscriptions-page .content-box {
   width: 80%;
   max-width: 900px;
   background: white;
@@ -16,55 +16,38 @@
   padding: 2rem;
 }
 
-.button-group {
+.subscriptions-page .button-group {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
 
-.action-button {
-  background-color: #14b8a6;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-}
-
-.header {
+.subscriptions-page .header {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.subscription-table {
+/* Table Styles */
+.subscriptions-page .subscription-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 1.2rem;
 }
 
-.subscription-table th, .subscription-table td {
+.subscriptions-page .subscription-table th, 
+.subscriptions-page .subscription-table td {
   border: 1px solid #ccc;
   padding: 1rem;
   text-align: left;
 }
 
-.subscription-table thead {
+.subscriptions-page .subscription-table thead {
   color: black;
   background-color: #f3f4f6;
 }
 
-.inactive-status {
-  font-weight: bold;
-}
-
-.subscribe-link {
-  color: #2563eb;
-  cursor: pointer;
-}
-
-.payment-info {
+.subscriptions-page .payment-info {
   background: #f3f4f6;
   color: black;
   padding: 1rem;
@@ -73,16 +56,4 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   margin-top: 1.5rem;
-}
-
-.payment-button {
-  width: 100%;
-  background-color: #2563eb;
-  color: white;
-  font-weight: bold;
-  padding: 1rem;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  margin-top: 1rem;
 }
