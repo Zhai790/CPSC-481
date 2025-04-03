@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -17,9 +16,6 @@ import { useNavigate } from 'react-router-dom';
   const ChildHome: React.FC = () => {
     const navigate = useNavigate();
 
-    const handleBackButtonClick = () => {
-      navigate('/'); // Navigate to the Welcome page (root path)
-    };
     const handleSearchButtonClick = () => {
       navigate('/search-page');
     };
@@ -34,9 +30,6 @@ import { useNavigate } from 'react-router-dom';
     <Box className="child-home-container">
       {/* Title */}
       <Typography sx={{ fontSize: '3rem', fontWeight: 'bold' }}>Recently Watched</Typography>
-
-      {/* Back Button */}
-      <button onClick={handleBackButtonClick} className="back-button">Back</button>
 
       {/* Recently Watched Section */}
       <Carousel

@@ -25,21 +25,6 @@
       text-align: center; 
     }
 
-  /* Back Button: Fix position to the top-right */
-.back-button {
-  position: absolute;
-  top: 10px;    /* Adjust vertical position */
-  right: 10px;  /* Move it to the right */
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 1000; /* Ensure it stays on top */
-}
-
 
 .recently-watched-carousel {
     width: 100%;    /* Fill parent container */
