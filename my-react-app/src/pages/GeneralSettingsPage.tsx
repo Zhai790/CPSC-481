@@ -16,8 +16,8 @@ const GeneralSettingsPage = () => {
   return (
   <div className="general-settings-page">
     <div className="container">
-    <button onClick={handleBackButtonClick} className="back-button">Back</button>
-    <button onClick={handleHelpButtonClick} className="help-button">Help</button>
+    <button onClick={handleBackButtonClick} className="button">Back</button>
+    <button onClick={handleHelpButtonClick} className="button">Help</button>
 
     <h1 className="header">General Settings</h1>
 

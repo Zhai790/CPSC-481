@@ -15,21 +15,18 @@ const InsightsPage = () => {
   };
 
   return (
+    <div className="insights-page">
     <div className="container">
-      {/* Back Button */}
       <button onClick={handleBackButtonClick} className="button">
         Back
       </button>
 
-      {/* Help Button */}
       <button onClick={handleHelpButtonClick} className="button">
         Help
       </button>
 
-      {/* header */}
       <h1 className="header">Insights</h1>
 
-      {/* insights Table, to be modified further */}
       <table className="table">
         <thead>
           <tr>
@@ -60,6 +57,7 @@ const InsightsPage = () => {
           </tr>
         </tbody>
       </table>
+    </div>
     </div>
   );
 };

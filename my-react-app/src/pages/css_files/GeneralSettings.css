@@ -4,15 +4,6 @@
   position: relative;
 }
 
-.general-settings-page .back-button,
-.general-settings-page .help-button {
-  top: 20px;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
 
 .general-settings-page .header {
   margin-bottom: 2rem;

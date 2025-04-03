@@ -4,26 +4,6 @@
     text-align: center;
   }
   
-  .security-page .back-button,
-  .security-page .help-button {
-    position: absolute;
-    top: 20px;
-    padding: 0.6rem 1.2rem;
-    font-size: 1rem;
-    background-color: #1a1a1a;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .security-page .back-button {
-    left: 20px;
-  }
-  
-  .security-page .help-button {
-    right: 20px;
-  }
   
   .security-page .fingerprint-button {
     padding: 2rem;

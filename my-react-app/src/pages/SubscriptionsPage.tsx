@@ -23,10 +23,8 @@ const SubscriptionsPage = () => {
     <div className="subscriptions-page">
       <div className="container">
         <div className="content">
-          <div className="button-container">
-            <button onClick={handleBackButtonClick} className="back-button">Back</button>
-            <button onClick={handleHelpButtonClick} className="help-button">Help</button>
-          </div>
+          <button onClick={handleBackButtonClick} className="button">Back</button>
+          <button onClick={handleHelpButtonClick} className="button">Help</button>
           
           <h1 className="header">Subscriptions</h1>
           

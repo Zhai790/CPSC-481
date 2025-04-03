@@ -19,8 +19,8 @@ const ContentFilteringPage = () => {
   return (
     <div className="filtering-page">
       <div className="filter-container">
-        <button onClick={handleBackButtonClick} className="back-button">Back</button>
-        <button onClick={handleHelpButtonClick} className="help-button">Help</button>
+        <button onClick={handleBackButtonClick} className="button">Back</button>
+        <button onClick={handleHelpButtonClick} className="button">Help</button>
         
         <h1 className="header">Content Filtering Settings</h1>
         
