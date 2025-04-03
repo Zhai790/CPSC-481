@@ -7,6 +7,20 @@
     background-color: #242424;
     padding: 2rem;
   }
+
+  .filtering-page .back-button {
+  width: auto; /* Ensures it only takes the necessary width */
+    padding: 0.5rem 1rem; /* Adjusts padding for a better fit */
+    font-size: 1rem; /* Keeps the font size reasonable */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
   
   .filtering-page .header {
     text-align: center;

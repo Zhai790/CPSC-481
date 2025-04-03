@@ -24,6 +24,6 @@
   grid-template-columns: 1fr;
   grid-auto-flow: row;
   gap: 1rem;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
 }

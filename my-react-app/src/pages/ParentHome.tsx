@@ -18,6 +18,7 @@ const ParentHome = () => {
     navigate('/insights'); // Navigate to the Welcome page (root path)
   };
     return (
+      <div className="parent-home">
       <div className="page-container">
       {/* Back Button */}
       <button onClick={handleBackButtonClick} className="back-button">Back</button>
@@ -36,6 +37,7 @@ const ParentHome = () => {
         <button onClick={handleSettingsButtonClick} className="button">Settings</button>
         <button className="button">Notifications</button>
       </div>
+    </div>
     </div>
   );
 };

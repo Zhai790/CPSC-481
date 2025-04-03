@@ -32,6 +32,7 @@ const Settings = () => {
   };
 
   return (
+    <div className="settings-page">
     <div className="container">
       <button onClick={handleBackButtonClick} className="back-button">Back</button>
       <button onClick={handleHelpButtonClick} className="help-button">Help</button>
@@ -52,6 +53,7 @@ const Settings = () => {
           General Settings
         </button>
       </div>
+    </div>
     </div>
   );
 };

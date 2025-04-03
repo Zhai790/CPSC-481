@@ -1,11 +1,11 @@
-.container {
+  .security-page .container {
     position: relative;
     padding: 2rem;
     text-align: center;
   }
   
-  .back-button,
-  .help-button {
+  .security-page .back-button,
+  .security-page .help-button {
     position: absolute;
     top: 20px;
     padding: 0.6rem 1.2rem;
@@ -17,15 +17,15 @@
     cursor: pointer;
   }
   
-  .back-button {
+  .security-page .back-button {
     left: 20px;
   }
   
-  .help-button {
+  .security-page .help-button {
     right: 20px;
   }
   
-  .fingerprint-button {
+  .security-page .fingerprint-button {
     padding: 2rem;
     font-size: 2rem;
     background: url('src/assets/fingerprint-icon.webp') no-repeat center center;
@@ -36,7 +36,7 @@
     cursor: pointer;
   }
   
-  .status-text {
+  .security-page .status-text {
     margin-top: 1rem;
     font-weight: bold;
   }

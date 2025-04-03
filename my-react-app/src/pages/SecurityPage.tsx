@@ -63,6 +63,7 @@ const SecurityPage = () => {
 
 
   return (
+    <div className="security-page">
     <div className="container">
     <button onClick={handleBackButtonClick} className="back-button">
       Back
@@ -84,6 +85,7 @@ const SecurityPage = () => {
     <p className="status-text">
       {isHolding ? `Scanning Fingerprint, please keep holding...` : ''}
     </p>
+  </div>
   </div>
 );
 };
