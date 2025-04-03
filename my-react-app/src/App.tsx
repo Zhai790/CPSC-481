@@ -10,6 +10,7 @@ import GeneralSettingsPage from "./pages/GeneralSettingsPage";
 import KidsHome from "./pages/KidsHome";
 import Favourites from './pages/Favourites';
 import Subscriptions from "./pages/SubscriptionsPage";
+import FilteringPage from "./pages/FilteringPage";
 import Remote from './features/remote/components/Remote';
 
 
@@ -47,9 +48,11 @@ export default function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/insights" element={<InsightsPage />} />
             <Route path="/general-settings" element={<GeneralSettingsPage />} />
+            <Route path="/subscriptions" element={<Subscriptions />} />
+            <Route path="/filters" element={<FilteringPage />} />
             <Route path="/child/favourites" element={<Favourites />} />
             <Route path="/kids-home" element={<KidsHome />} />
-            <Route path="/subscriptions" element={<Subscriptions />} />
+            
           </Routes>
         </Box>
       </Box>

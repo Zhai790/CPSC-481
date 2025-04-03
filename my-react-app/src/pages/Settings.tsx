@@ -16,7 +16,7 @@ const Settings = () => {
 
   // button click handlers for each of the settings options
   const handleContentFilteringClick = () => {
-    alert("Content Filtering settings will be here.");
+    navigate('/filters');
   };
 
   const handleTimeLimitSettingsClick = () => {

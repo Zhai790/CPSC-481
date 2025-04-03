@@ -14,6 +14,7 @@ const GeneralSettingsPage = () => {
   };
 
   return (
+  <div className="general-settings-page">
     <div className="container">
     <button onClick={handleBackButtonClick} className="back-button">Back</button>
     <button onClick={handleHelpButtonClick} className="help-button">Help</button>
@@ -27,6 +28,7 @@ const GeneralSettingsPage = () => {
       <button className="settings-button">Network & Connectivity</button>
       <button className="settings-button">Storage</button>
       <button className="settings-button">Security & Privacy</button>
+    </div>
     </div>
   </div>
 );
