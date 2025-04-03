@@ -106,7 +106,7 @@ export default function DownloadPage() {
           </Typography>
         )}
       </Box>
-      {/* "Back Home" button removed as per previous fix */}
+      
     </Box>
   );
 }
