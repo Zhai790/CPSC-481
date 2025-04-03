@@ -9,6 +9,10 @@ import InsightsPage from './pages/InsightsPage';
 import GeneralSettingsPage from "./pages/GeneralSettingsPage";
 import KidsHome from "./pages/KidsHome";
 import Favourites from './pages/Favourites';
+import SearchPage from './pages/SearchPage';
+import SearchResults from './pages/SearchResults';
+import ContentFilters from './pages/ContentFilters';
+import ContentDetails from './pages/ContentDetails';
 
 import Remote from './features/remote/components/Remote';
 // import TVScreen from './features/tv/components/TVScreen';
@@ -49,6 +53,10 @@ export default function App() {
             <Route path="/general-settings" element={<GeneralSettingsPage />} />
             <Route path="/child/favourites" element={<Favourites />} />
             <Route path="/kids-home" element={<KidsHome />} />
+            <Route path="/search-page" element={<SearchPage />} />
+            <Route path="/search-results" element={<SearchResults />} />
+            <Route path="/content-filters" element={<ContentFilters />} />
+            <Route path="/content-details" element={<ContentDetails />} />
           </Routes>
         </Box>
       </Box>
