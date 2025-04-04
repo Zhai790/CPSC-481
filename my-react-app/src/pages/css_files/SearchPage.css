@@ -1,24 +1,50 @@
-/* 
-  Outer container: fills the screen & centers content 
-*/
-.page-container {
-    height: 100vh;             
-    display: flex;
-    justify-content: center;  
-    align-items: center;       
-  }
-  
-  /*
-    Inner container: horizontal row with gap 
-  */
-  .search-container {
-    display: flex;
-    gap: 2rem; 
-  }
-  
-  /* Make search bar wider */
-  .search-bar {
-    width: 600px;
-    background-color: white;
-  }
-  
+/* Inner container: vertical stack with gap */
+.search-container {
+  display: flex;
+  flex-direction: column; 
+  gap: 2rem;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Make search bar wider and white background */
+.search-bar {
+  width: 65vw;
+  background-color: white;
+}
+
+.toolbar {
+  display: flex;
+  gap: 1rem;             /* Space between items */
+  align-items: center;   /* Vertically center items */
+  justify-content: center; /* Horizontally center the whole row, if desired */
+}
+
+
+/* Container for voice recognition controls */
+.voice-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Mic icon styling */
+.mic-icon {
+  font-size: 40px;
+}
+
+/* Spacing for the mic status text */
+.mic-status {
+  margin-left: 0.5rem;
+}
+
+/* Container for the search and reset buttons */
+.button-container {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Override react-simple-keyboard button text to black */
+.simple-keyboard .hg-button {
+  color: black;
+}

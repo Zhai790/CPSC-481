@@ -5,6 +5,7 @@
     "vite": "^6.2.1"
   },
   "dependencies": {
+    "react-simple-keyboard": "^3.8.58",
     "react-speech-recognition": "^4.0.0"
   }
 }
