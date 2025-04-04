@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { IconButton, Box } from '@mui/material';
 import {
   PowerSettingsNew as PowerIcon,
@@ -9,13 +10,18 @@ import {
   Fingerprint as FingerprintIcon,
 } from '@mui/icons-material';
 import { makeStyles } from '@mui/styles';
+import { useState } from 'react';
+
+interface RemoteProps {
+  onPowerToggle: () => void;
+}
 
 const useStyles = makeStyles(() => ({
   remoteContainer: {
     width: 250,
     height: 600,
     backgroundColor: '#f5f5f5',
-    borderRadius: '50% / 25%', 
+    borderRadius: '50% / 25%',
     position: 'relative',
     margin: 'auto',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)',
@@ -28,12 +34,12 @@ const useStyles = makeStyles(() => ({
   buttonBase: {
     position: 'absolute',
     borderRadius: '50%',
-    border: '2px solid rgba(0, 0, 255, 0.6)', // Always visible outline
-    boxShadow: '0 0 5px rgba(0, 0, 255, 0.8)', // Optional glowing effect
+    border: '2px solid rgba(0, 0, 255, 0.6)',
+    boxShadow: '0 0 5px rgba(0, 0, 255, 0.8)',
     transition: 'box-shadow 0.3s ease-in-out',
     '&:hover': {
-      boxShadow: '0 0 10px rgba(0, 0, 255, 1)', // Slightly more glow on hover
-    }
+      boxShadow: '0 0 10px rgba(0, 0, 255, 1)',
+    },
   },
   micButton: {
     position: 'absolute',
@@ -44,21 +50,20 @@ const useStyles = makeStyles(() => ({
   powerButton: {
     position: 'absolute',
     top: 50,
-    width: 100,  
-    height: 100, 
+    width: 100,
+    height: 100,
     padding: 10,
     right: 45,
-    '& svg': {  
+    '& svg': {
       fontSize: 70,
-    }
+    },
   },
   backButton: {
     position: 'absolute',
     top: 110,
     width: 75,
     height: 75,
-    fontsize: 100,
-    '& svg': {  
+    '& svg': {
       fontSize: 60,
     },
     right: '20%',
@@ -71,9 +76,9 @@ const useStyles = makeStyles(() => ({
     flexDirection: 'column',
     gap: 25,
     width: 75,
-    '& svg': {  
+    '& svg': {
       fontSize: 40,
-    }
+    },
   },
   homeButton: {
     position: 'absolute',
@@ -81,9 +86,9 @@ const useStyles = makeStyles(() => ({
     width: 75,
     height: 75,
     left: '20%',
-    '& svg': {  
+    '& svg': {
       fontSize: 40,
-    }
+    },
   },
   touchpadContainer: {
     position: 'absolute',
@@ -104,17 +109,44 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function Remote() {
+export default function Remote({ onPowerToggle }: RemoteProps) {
+  const navigate = useNavigate();
   const classes = useStyles();
+  const [volume, setVolume] = useState(10);
 
-  // Placeholders
-  const handlePower = () => alert('Power button clicked');
-  const handleMic = () => alert('Mic button clicked');
-  const handleBack = () => alert('Back button clicked');
-  const handleVolumeUp = () => alert('Volume Up');
-  const handleVolumeDown = () => alert('Volume Down');
-  const handleHome = () => alert('Home button clicked');
-  const handleTouchpadClick = () => alert('Touchpad clicked (fingerprint reader)');
+  // Power toggle: simply call the parent's callback.
+  const handlePower = () => {
+    if (onPowerToggle) onPowerToggle();
+    console.log('Remote Power button clicked');
+  };
+
+  const handleMic = () => {
+    console.log('Mic button clicked - Start voice recognition');
+  };
+
+  const handleBack = () => {
+    console.log('Back button clicked');
+    navigate(-1);
+  };
+
+  const handleVolumeUp = () => {
+    setVolume((prev) => Math.min(prev + 1, 100));
+    console.log('Volume Up:', volume + 1);
+  };
+
+  const handleVolumeDown = () => {
+    setVolume((prev) => Math.max(prev - 1, 0));
+    console.log('Volume Down:', volume - 1);
+  };
+
+  const handleHome = () => {
+    console.log('Home button clicked');
+    navigate('/kids-home');
+  };
+
+  const handleTouchpadClick = () => {
+    console.log('Touchpad clicked (fingerprint reader)');
+  };
 
   return (
     <Box className={classes.remoteContainer}>
@@ -130,7 +162,7 @@ export default function Remote() {
 
       {/* Back Button */}
       <IconButton className={`${classes.buttonBase} ${classes.backButton}`} onClick={handleBack}>
-        <BackIcon/>
+        <BackIcon />
       </IconButton>
 
       {/* Audio Controls (Volume Up/Down) */}
@@ -150,7 +182,6 @@ export default function Remote() {
 
       {/* Touchpad / Fingerprint Area */}
       <Box className={classes.touchpadContainer} onClick={handleTouchpadClick}>
-        {/* fingerprint icon */}
         <FingerprintIcon className={classes.fingerprintIcon} />
       </Box>
     </Box>

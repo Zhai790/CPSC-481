@@ -1,35 +1,35 @@
-import React, { useState } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import StarIcon from '@mui/icons-material/Star';
 import DownloadIcon from '@mui/icons-material/Download';
 import SearchIcon from '@mui/icons-material/Search';
+import "/src/pages/css_files/KidsHome.css";
 import { useNavigate } from 'react-router-dom';
-import "./KidsHome.css";
 
-interface Show {
-  id: number;
-  title: string;
-}
 
-const ChildHome: React.FC = () => {
-  // Initialize navigation hook
-  const navigate = useNavigate();
+  interface Show {
+    id: number;
+    title: string;
+  }
+  
+  const ChildHome: React.FC = () => {
+    const navigate = useNavigate();
 
-  const recentShows: Show[] = [
-    { id: 1, title: 'Show 1' },
-    { id: 2, title: 'Show 2' },
-    { id: 3, title: 'Show 3' },
-    { id: 4, title: 'Show 4' },
-  ];
+    const handleSearchButtonClick = () => {
+      navigate('/search-page');
+    };
+    const recentShows: Show[] = [
+      { id: 1, title: 'Show 1' },
+      { id: 2, title: 'Show 2' },
+      { id: 3, title: 'Show 3' },
+      { id: 4, title: 'Show 4' },
+    ];
 
   return (
     <Box className="child-home-container">
       {/* Title */}
-      <Typography sx={{ fontSize: '3rem', fontWeight: 'bold' }}>
-        Recently Watched
-      </Typography>
+      <Typography sx={{ fontSize: '3rem', fontWeight: 'bold' }}>Recently Watched</Typography>
 
       {/* Recently Watched Section */}
       <Carousel
@@ -55,7 +55,9 @@ const ChildHome: React.FC = () => {
           variant="outlined"
           sx={{
             borderColor: '#FFD700',     // Gold outline
+
             color: '#FFD700',           // Gold color for icon and text
+
             display: 'flex',
             flexDirection: 'column',    // Stack icon above text
             alignItems: 'center',
@@ -71,14 +73,16 @@ const ChildHome: React.FC = () => {
           </Typography>
         </Button>
 
+
         <Button variant="outlined" startIcon={<DownloadIcon />}>
           Downloads
         </Button>
-        <Button variant="outlined" startIcon={<SearchIcon />}>
+        <Button variant="outlined" startIcon={<SearchIcon />} onClick={handleSearchButtonClick}>
           Search
         </Button>
       </Box>
     </Box>
+
   );
 };
 
