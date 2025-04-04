@@ -50,17 +50,17 @@ const useStyles = makeStyles(() => ({
   powerButton: {
     position: 'absolute',
     top: 50,
-    width: 100,
-    height: 100,
+    width: 60,
+    height: 60,
     padding: 10,
     right: 45,
     '& svg': {
-      fontSize: 70,
+      fontSize: 50,
     },
   },
   backButton: {
     position: 'absolute',
-    top: 110,
+    top: 150,
     width: 75,
     height: 75,
     '& svg': {
@@ -82,7 +82,7 @@ const useStyles = makeStyles(() => ({
   },
   homeButton: {
     position: 'absolute',
-    top: 35,
+    top: 75,
     width: 75,
     height: 75,
     left: '20%',
