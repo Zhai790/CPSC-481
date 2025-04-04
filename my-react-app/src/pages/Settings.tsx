@@ -11,7 +11,7 @@ const Settings = () => {
 
   // navigation logic for the help button
   const handleHelpButtonClick = () => {
-    navigate("/time-limit"); //navigate to time limit screen
+    alert("This is the help page. You can configure your settings here.");
   };
 
   // button click handlers for each of the settings options(3 to be added)

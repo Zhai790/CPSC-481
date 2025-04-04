@@ -9,6 +9,7 @@ import InsightsPage from './pages/InsightsPage';
 import GeneralSettingsPage from "./pages/GeneralSettingsPage";
 import KidsHome from "./pages/KidsHome";
 import Favourites from './pages/Favourites';
+import TimeLimit from './pages/TimeLimit';
 
 import Remote from './features/remote/components/Remote';
 // import TVScreen from './features/tv/components/TVScreen';
@@ -49,6 +50,7 @@ export default function App() {
             <Route path="/general-settings" element={<GeneralSettingsPage />} />
             <Route path="/child/favourites" element={<Favourites />} />
             <Route path="/kids-home" element={<KidsHome />} />
+            <Route path="/time-limit" element={<TimeLimit />} />
           </Routes>
         </Box>
       </Box>
