@@ -1,13 +1,6 @@
-import { useNavigate } from 'react-router-dom';
 import '/src/pages/css_files/GeneralSettings.css';
 
 const GeneralSettingsPage = () => {
-  const navigate = useNavigate();
-
-  // navigation functions
-  const handleBackButtonClick = () => {
-    navigate('/settings'); 
-  };
 
   const handleHelpButtonClick = () => {
     alert("This page allows you to adjust general settings such as language, display, and connectivity.");
@@ -16,7 +9,6 @@ const GeneralSettingsPage = () => {
   return (
   <div className="general-settings-page">
     <div className="container">
-    <button onClick={handleBackButtonClick} className="button">Back</button>
     <button onClick={handleHelpButtonClick} className="button">Help</button>
 
     <h1 className="header">General Settings</h1>

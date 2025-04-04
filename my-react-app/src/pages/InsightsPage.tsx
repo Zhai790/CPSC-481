@@ -1,13 +1,6 @@
-import { useNavigate } from 'react-router-dom';
 import '/src/pages/css_files/Insights.css';
 
 const InsightsPage = () => {
-  const navigate = useNavigate();
-
-  // navigation logic for the back button
-  const handleBackButtonClick = () => {
-    navigate('/parent-home'); 
-  };
 
   //help button produces an alert message
   const handleHelpButtonClick = () => {
@@ -17,9 +10,6 @@ const InsightsPage = () => {
   return (
     <div className="insights-page">
     <div className="container">
-      <button onClick={handleBackButtonClick} className="button">
-        Back
-      </button>
 
       <button onClick={handleHelpButtonClick} className="button">
         Help

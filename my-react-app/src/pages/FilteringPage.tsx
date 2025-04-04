@@ -1,12 +1,6 @@
-import { useNavigate } from "react-router-dom";
 import "/src/pages/css_files/FilteringPage.css";
 
 const ContentFilteringPage = () => {
-  const navigate = useNavigate();
-
-  const handleBackButtonClick = () => {
-    navigate("/settings");
-  };
 
   const handleHelpButtonClick = () => {
     alert("This page allows you to configure content filtering settings.");
@@ -19,7 +13,6 @@ const ContentFilteringPage = () => {
   return (
     <div className="filtering-page">
       <div className="filter-container">
-        <button onClick={handleBackButtonClick} className="button">Back</button>
         <button onClick={handleHelpButtonClick} className="button">Help</button>
         
         <h1 className="header">Content Filtering Settings</h1>

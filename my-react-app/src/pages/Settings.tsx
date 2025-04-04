@@ -4,11 +4,6 @@ import './css_files/Settings.css';
 const Settings = () => {
   const navigate = useNavigate();
 
-  //navigation logic for the back button
-  const handleBackButtonClick = () => {
-    navigate('/parent-home'); //navigate to the parent home page
-  };
-
   // navigation logic for the help button
   const handleHelpButtonClick = () => {
     navigate("/time-limit"); //navigate to time limit screen
@@ -34,7 +29,6 @@ const Settings = () => {
   return (
     <div className="settings-page">
     <div className="container">
-      <button onClick={handleBackButtonClick} className="button">Back</button>
       <button onClick={handleHelpButtonClick} className="button">Help</button>
 
       <h1 className="header">Settings</h1>

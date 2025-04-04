@@ -1,16 +1,8 @@
-import { useNavigate } from 'react-router-dom';
 import "/src/pages/css_files/SubscriptionsPage.css";
 
 const SubscriptionsPage = () => {
 
-  const navigate = useNavigate();
-
-  //navigation logic for the back button
-  const handleBackButtonClick = () => {
-    navigate('/settings'); //navigate to the Welcome page
-  };
-
-  // navigation logic for the help button
+  //logic for the help button
   const handleHelpButtonClick = () => {
     alert("This is the subscriptions page. You can configure your subscription settings here.");
   };
@@ -23,7 +15,6 @@ const SubscriptionsPage = () => {
     <div className="subscriptions-page">
       <div className="container">
         <div className="content">
-          <button onClick={handleBackButtonClick} className="button">Back</button>
           <button onClick={handleHelpButtonClick} className="button">Help</button>
           
           <h1 className="header">Subscriptions</h1>
