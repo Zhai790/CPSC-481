@@ -28,7 +28,8 @@ const SearchPage: React.FC = () => {
 
   // Validate the input only when the search is submitted.
   const handleSearch = () => {
-    if (inputValue.trim().toLowerCase() === 'cocomelon') {
+    const cleanedInput = inputValue.trim().replace(/[^a-zA-Z]/g, "").toLowerCase();
+    if (cleanedInput === 'cocomelon') {
       setSearchTerm(inputValue);
       navigate('/search-results');
     } else {
