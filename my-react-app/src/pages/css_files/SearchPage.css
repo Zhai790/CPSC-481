@@ -1,4 +1,3 @@
-/* Inner container: vertical stack with gap */
 .search-container {
   display: flex;
   flex-direction: column; 
@@ -8,7 +7,6 @@
   align-items: center;
 }
 
-/* Make search bar wider and white background */
 .search-bar {
   width: 65vw;
   background-color: white;
@@ -16,35 +14,42 @@
 
 .toolbar {
   display: flex;
-  gap: 1rem;             /* Space between items */
-  align-items: center;   /* Vertically center items */
-  justify-content: center; /* Horizontally center the whole row, if desired */
+  gap: 1rem;             
+  align-items: center;   
+  justify-content: center; 
 }
 
 
-/* Container for voice recognition controls */
 .voice-container {
   display: flex;
   align-items: center;
 }
 
-/* Mic icon styling */
 .mic-icon {
+  color: white;
   font-size: 40px;
 }
 
-/* Spacing for the mic status text */
 .mic-status {
   margin-left: 0.5rem;
 }
 
-/* Container for the search and reset buttons */
 .button-container {
   display: flex;
   gap: 1rem;
 }
 
-/* Override react-simple-keyboard button text to black */
 .simple-keyboard .hg-button {
   color: black;
+}
+
+.custom-snackbar {
+  right: 350px !important; 
+}
+
+.custom-snackbar .MuiSnackbarContent-root {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 16px;
+  background-color: #f50057;
 }

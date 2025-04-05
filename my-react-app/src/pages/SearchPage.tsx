@@ -90,7 +90,7 @@ const SearchPage: React.FC = () => {
         <Box className="toolbar">
           {/* Mic Icon & Status */}
           <IconButton onClick={toggleListening}>
-            <MicIcon color={listening ? 'primary' : 'inherit'} />
+            <MicIcon className="mic-icon" />
           </IconButton>
           <Typography variant="body1" className="mic-status">
             {listening ? 'Listening...' : 'Voice Search Off'}
@@ -109,9 +109,11 @@ const SearchPage: React.FC = () => {
 
         {/* Snackbar for invalid search */}
         <Snackbar
+          className="custom-snackbar"
           open={openSnackbar}
           autoHideDuration={3000}
           onClose={handleCloseSnackbar}
+          anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
           message="There are no shows under this name."
         />
       </div>
