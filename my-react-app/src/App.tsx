@@ -12,11 +12,11 @@ import KidsHome from "./pages/KidsHome";
 import Favourites from './pages/Favourites';
 import Subscriptions from "./pages/SubscriptionsPage";
 import FilteringPage from "./pages/FilteringPage";
-
 import SearchPage from './pages/SearchPage';
 import SearchResults from './pages/SearchResults';
 import ContentFilters from './pages/ContentFilters';
 import ContentDetails from './pages/ContentDetails';
+import TimeLimit from './pages/TimeLimit';
 
 import Remote from './features/remote/components/Remote';
 
@@ -71,6 +71,7 @@ export default function App() {
             <Route path="/search-results" element={<SearchResults />} />
             <Route path="/content-filters" element={<ContentFilters />} />
             <Route path="/content-details" element={<ContentDetails />} />
+            <Route path="/time-limit" element={<TimeLimit />} />
           </Routes>
 
           {/* Black overlay covers the TV screen if isTVOn is false */}

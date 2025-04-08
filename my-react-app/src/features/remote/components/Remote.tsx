@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { IconButton, Box } from '@mui/material';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import {
   PowerSettingsNew as PowerIcon,
   ArrowBack as BackIcon,
@@ -41,7 +42,7 @@ const useStyles = makeStyles(() => ({
       boxShadow: '0 0 10px rgba(0, 0, 255, 1)',
     },
   },
-  micButton: {
+  micIcon: {
     position: 'absolute',
     top: 8,
     width: 75,
@@ -50,17 +51,17 @@ const useStyles = makeStyles(() => ({
   powerButton: {
     position: 'absolute',
     top: 50,
-    width: 100,
-    height: 100,
+    width: 60,
+    height: 60,
     padding: 10,
     right: 45,
     '& svg': {
-      fontSize: 70,
+      fontSize: 50,
     },
   },
   backButton: {
     position: 'absolute',
-    top: 110,
+    top: 150,
     width: 75,
     height: 75,
     '& svg': {
@@ -82,7 +83,7 @@ const useStyles = makeStyles(() => ({
   },
   homeButton: {
     position: 'absolute',
-    top: 35,
+    top: 75,
     width: 75,
     height: 75,
     left: '20%',
@@ -120,10 +121,6 @@ export default function Remote({ onPowerToggle }: RemoteProps) {
     console.log('Remote Power button clicked');
   };
 
-  const handleMic = () => {
-    console.log('Mic button clicked - Start voice recognition');
-  };
-
   const handleBack = () => {
     console.log('Back button clicked');
     navigate(-1);
@@ -151,7 +148,10 @@ export default function Remote({ onPowerToggle }: RemoteProps) {
   return (
     <Box className={classes.remoteContainer}>
       {/* Mic Button */}
-      <IconButton className={`${classes.buttonBase} ${classes.micButton}`} onClick={handleMic}>
+      <FiberManualRecordIcon 
+        style={{ color: 'grey', fontSize: 10 }} 
+      />
+      <IconButton className={`${classes.micIcon}`}>
         <MicIcon />
       </IconButton>
 
