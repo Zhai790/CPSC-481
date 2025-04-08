@@ -10,7 +10,8 @@ import InsightsPage from './pages/InsightsPage';
 import GeneralSettingsPage from "./pages/GeneralSettingsPage";
 import KidsHome from "./pages/KidsHome";
 import Favourites from './pages/Favourites';
-
+import Subscriptions from "./pages/SubscriptionsPage";
+import FilteringPage from "./pages/FilteringPage";
 import SearchPage from './pages/SearchPage';
 import SearchResults from './pages/SearchResults';
 import ContentFilters from './pages/ContentFilters';
@@ -62,6 +63,8 @@ export default function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/insights" element={<InsightsPage />} />
             <Route path="/general-settings" element={<GeneralSettingsPage />} />
+            <Route path="/subscriptions" element={<Subscriptions />} />
+            <Route path="/filters" element={<FilteringPage />} />
             <Route path="/child/favourites" element={<Favourites />} />
             <Route path="/kids-home" element={<KidsHome />} />
             <Route path="/search-page" element={<SearchPage />} />

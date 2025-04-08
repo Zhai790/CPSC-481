@@ -1,58 +1,30 @@
-.container {
+  .settings-page .container {
     padding: 2rem;
     text-align: center;
     position: relative;
   }
   
-  .back-button,
-  .help-button {
-    position: absolute;
-    top: 20px;
-    padding: 0.6rem 1.2rem;
-    font-size: 1rem;
-    background-color: #1a1a1a;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .back-button {
-    left: 20px;
-  }
-  
-  .help-button {
-    right: 20px;
-  }
-  
-  .header {
+  .settings-page .header {
     margin-top: 3rem;
     margin-bottom: 3rem;
     font-size: 2rem;
   }
   
-  .button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5rem;
+  .settings-page .button-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    gap: 1rem;
+    width: 100%;
+    margin: 0 auto;
   }
-  
-  .button {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    margin: 1rem;
-    background-color: #1a1a1a;
+
+  .settings-page .button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 80%;
-    max-width: 400px;
   }
-  
-  .button:hover {
-    background-color: #333;
-  }
-  

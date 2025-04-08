@@ -1,0 +1,59 @@
+.subscriptions-page .container {
+  min-height: 100vh;
+  background-color: #242424;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscriptions-page .content-box {
+  width: 80%;
+  max-width: 900px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.subscriptions-page .button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.subscriptions-page .header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Table Styles */
+.subscriptions-page .subscription-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+}
+
+.subscriptions-page .subscription-table th, 
+.subscriptions-page .subscription-table td {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: left;
+}
+
+.subscriptions-page .subscription-table thead {
+  color: black;
+  background-color: #f3f4f6;
+}
+
+.subscriptions-page .payment-info {
+  background: #f3f4f6;
+  color: black;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+}

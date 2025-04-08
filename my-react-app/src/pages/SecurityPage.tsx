@@ -42,11 +42,6 @@ const SecurityPage = () => {
     }
   };
 
-  // back button logic
-  const handleBackButtonClick = () => {
-    navigate('/'); // navigate to the Welcome page
-  };
-
   //help button logic
   const handleHelpButtonClick = () => {
     alert("This is the help page. Please hold the fingerprint button for access.");
@@ -63,12 +58,9 @@ const SecurityPage = () => {
 
 
   return (
+    <div className="security-page">
     <div className="container">
-    <button onClick={handleBackButtonClick} className="back-button">
-      Back
-    </button>
-
-    <button onClick={handleHelpButtonClick} className="help-button">
+    <button onClick={handleHelpButtonClick} className="button">
       Help
     </button>
 
@@ -84,6 +76,7 @@ const SecurityPage = () => {
     <p className="status-text">
       {isHolding ? `Scanning Fingerprint, please keep holding...` : ''}
     </p>
+  </div>
   </div>
 );
 };

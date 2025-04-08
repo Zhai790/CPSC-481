@@ -4,19 +4,14 @@ import './css_files/Settings.css';
 const Settings = () => {
   const navigate = useNavigate();
 
-  //navigation logic for the back button
-  const handleBackButtonClick = () => {
-    navigate('/parent-home'); //navigate to the Welcome page
-  };
-
   // navigation logic for the help button
   const handleHelpButtonClick = () => {
     alert("This is the help page. You can configure your settings here.");
   };
 
-  // button click handlers for each of the settings options(3 to be added)
+  // button click handlers for each of the settings options
   const handleContentFilteringClick = () => {
-    alert("Content Filtering settings will be here.");
+    navigate('/filters');
   };
 
   const handleTimeLimitSettingsClick = () => {
@@ -24,7 +19,7 @@ const Settings = () => {
   };
 
   const handleSubscriptionsClick = () => {
-    alert("Subscription settings will be here.");
+    navigate('/subscriptions');
   };
 
   const handleGeneralSettingsClick = () => {
@@ -32,9 +27,9 @@ const Settings = () => {
   };
 
   return (
+    <div className="settings-page">
     <div className="container">
-      <button onClick={handleBackButtonClick} className="back-button">Back</button>
-      <button onClick={handleHelpButtonClick} className="help-button">Help</button>
+      <button onClick={handleHelpButtonClick} className="button">Help</button>
 
       <h1 className="header">Settings</h1>
 
@@ -52,6 +47,7 @@ const Settings = () => {
           General Settings
         </button>
       </div>
+    </div>
     </div>
   );
 };

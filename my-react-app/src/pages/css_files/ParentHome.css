@@ -1,5 +1,5 @@
 /* page Container: Center everything */
-.page-container {
+  .parent-home .page-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,8 +11,7 @@
   }
   
   /* Back Button: Positioned at the top right */
-  .back-button {
-    position: absolute;
+  .parent-home .back-button {
     top: 20px;
     right: 20px;
     padding: 10px 20px;
@@ -24,18 +23,18 @@
     cursor: pointer;
   }
   
-  .back-button:hover {
+  .parent-home .back-button:hover {
     background-color: #0056b3;
   }
   
   /* welcome Message*/
-  .welcome-message {
+  .parent-home .welcome-message {
     font-size: 24px;
     margin-bottom: 20px;
   }
   
   /* image Container to display the image */
-  .image-container {
+  .parent-home .image-container {
     width: 80%;
     max-width: 600px;
     margin-bottom: 20px;
@@ -45,14 +44,14 @@
   }
   
   /* Image */
-  .image {
+  .parent-home .image {
     width: 100%;
     height: auto;
     display: block;
   }
   
   /* button Container: Positioned beneath the image */
-  .button-container {
+  .parent-home .button-container {
     display: flex;
     justify-content: space-between;
     width: 80%;
@@ -60,7 +59,7 @@
   }
   
   /* button Styling: Small rectangle buttons */
-  .button {
+  .parent-home .button {
     width: 30%;
     padding: 10px;
     font-size: 16px;
@@ -71,6 +70,6 @@
     cursor: pointer;
   }
   
-  .button:hover {
+  .parent-home .button:hover {
     background-color: #218838;
   }
