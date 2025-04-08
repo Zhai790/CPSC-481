@@ -11,24 +11,30 @@ export default function TimeLimit() {
   
   const [count, setCount] = useState(0);
 
+  const [limit, setLimit] = useState(0);
+
+  let [isOpen, setIsOpen] = useState(false);
+
   // Function to increase count
   const increment = () => setCount(count + 0.5);
 
   // Function to decrease count
   const decrement = () => setCount(count - 0.5);
 
-  let [isOpen, setIsOpen] = useState(false)
+  const confirmLimit = () => {
+    setLimit(count);
+    setIsOpen(false)
+  }
  
   const confirm = () => {
     setIsOpen(true);
-    console.log(isOpen);  // Check if the state is updating
   }
     
 
   return (
     <div className="tlcenter-container">
       <h1>Time Limit</h1>
-      <p>Current time limit : </p>
+      <p>Current time limit : <br></br>{limit} hours</p>
 
       <div className="button-container">
         <button className="plus-button" onClick={increment}>+</button>
@@ -41,14 +47,14 @@ export default function TimeLimit() {
 
       
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-1000">
-          <div className="fixed inset-0 absolute w-screen items-center justify-center p-4">
+          <div className="fixed inset-0">
             <DialogPanel className="max-w-lg space-y-4 border bg-white p-12">
               <DialogTitle className="font-bold">Confirm?</DialogTitle>
               <Description>Would you like to set this limit?</Description>
               <p>{count} hours</p>
               <div className="flex gap-4">
                 <button onClick={() => setIsOpen(false)}>Cancel</button>
-                <button onClick={() => setIsOpen(false)}>Confirm</button>
+                <button onClick={confirmLimit}>Confirm</button>
               </div>
             </DialogPanel>
           </div>
