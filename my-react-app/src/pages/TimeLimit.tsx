@@ -39,7 +39,7 @@ export default function TimeLimit() {
       <div className="button-container">
         <button className="plus-button" onClick={increment}>+</button>
         <button className="minus-button" onClick={decrement}>-</button>
-        <button className="confirm-button" onClick={confirm}>Set Limit</button>
+        <button className="tlconfirm-button" onClick={confirm}>Set Limit</button>
       </div>
 
       <button className="tlhelp-button"onClick={handleHelpButtonClick}>Help</button>
