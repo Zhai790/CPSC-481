@@ -23,6 +23,7 @@ import LanguageRegion from './pages/LanguageRegion';
 import Network from './pages/Network';
 import Storage from './pages/Storage';
 import SecuritySettings from './pages/SecuritySettings';
+import Notifications from './pages/Notifications';
 
 import Remote from './features/remote/components/Remote';
 
@@ -84,6 +85,7 @@ export default function App() {
             <Route path="/security-settings" element={<SecuritySettings />} />
             <Route path="/network" element={<Network />} />
             <Route path="/storage" element={<Storage />} />
+            <Route path="/notifications" element={<Notifications />} />
           </Routes>
 
           {/* Black overlay covers the TV screen if isTVOn is false */}
