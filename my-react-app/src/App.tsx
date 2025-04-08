@@ -17,6 +17,12 @@ import SearchResults from './pages/SearchResults';
 import ContentFilters from './pages/ContentFilters';
 import ContentDetails from './pages/ContentDetails';
 import TimeLimit from './pages/TimeLimit';
+import Accessibility from './pages/Accessibility';
+import DisplaySound from './pages/DisplaySound';
+import LanguageRegion from './pages/LanguageRegion';
+import Network from './pages/Network';
+import Storage from './pages/Storage';
+import SecuritySettings from './pages/SecuritySettings';
 
 import Remote from './features/remote/components/Remote';
 
@@ -72,6 +78,12 @@ export default function App() {
             <Route path="/content-filters" element={<ContentFilters />} />
             <Route path="/content-details" element={<ContentDetails />} />
             <Route path="/time-limit" element={<TimeLimit />} />
+            <Route path="/accessibility" element={<Accessibility />} />
+            <Route path="/display-sound" element={<DisplaySound />} />
+            <Route path="/language-region" element={<LanguageRegion />} />
+            <Route path="/security-settings" element={<SecuritySettings />} />
+            <Route path="/network" element={<Network />} />
+            <Route path="/storage" element={<Storage />} />
           </Routes>
 
           {/* Black overlay covers the TV screen if isTVOn is false */}

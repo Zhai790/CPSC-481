@@ -1,6 +1,9 @@
 import '/src/pages/css_files/GeneralSettings.css';
+import { useNavigate } from 'react-router-dom';
 
 const GeneralSettingsPage = () => {
+
+  const navigate = useNavigate();
 
   const handleHelpButtonClick = () => {
     alert("This page allows you to adjust general settings such as language, display, and connectivity.");
@@ -14,12 +17,12 @@ const GeneralSettingsPage = () => {
     <h1 className="header">General Settings</h1>
 
     <div className="button-container">
-      <button className="settings-button">Language & Region</button>
-      <button className="settings-button">Display & Sound Settings</button>
-      <button className="settings-button">Accessibility Options</button>
-      <button className="settings-button">Network & Connectivity</button>
-      <button className="settings-button">Storage</button>
-      <button className="settings-button">Security & Privacy</button>
+      <button className="language-region" onClick={() => navigate("/LanguageRegion")}>Language & Region</button> 
+      <button className="display-sound" onClick={() => navigate("/DisplaySound")}>Display & Sound Settings</button>
+      <button className="accessibility" onClick={() => navigate("/Accessibility")}>Accessibility Options</button>
+      <button className="network" onClick={() => navigate("/Network")}>Network & Connectivity</button>
+      <button className="storage" onClick={() => navigate("/Storage")}>Storage</button>
+      <button className="security-settings" onClick={() => navigate("/SecuritySettings")}>Security & Privacy</button>
     </div>
     </div>
   </div>
