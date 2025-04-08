@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import "/src/pages/css_files/SecurityPage.css"; 
+import "/src/pages/css_files/SecurityPage.css";
 
 const SecurityPage = () => {
   const navigate = useNavigate();
@@ -8,23 +8,26 @@ const SecurityPage = () => {
   const [isHolding, setIsHolding] = useState(false);
   const [timer, setTimer] = useState<number | null>(null);
 
+  const [showPopup, setShowPopup] = useState(false);
+  const [securityEnabled, ] = useState(true); // Toggle to simulate security being on/off
+
+
   const handleFingerprintButtonPress = () => {
-    //navigate to the Parent Home page
-    setTimeout(() => {
+    if (securityEnabled) {
       navigate("/parent-home");
-    }, 500); //slight delay before navigating
+    } else {
+      setShowPopup(true); // Show popup if fingerprint is not accepted
+    }
   };
 
-  //timer to track how long the button is held
+  // Start scan timer
   const handleMouseDown = () => {
     setIsHolding(true);
     setHoldingTime(0);
-    
-    //set the timer to automatically trigger navigation after 3 seconds
+
     const countdownTimer = setInterval(() => {
       setHoldingTime((prevTime) => {
         if (prevTime >= 2) {
-          // we automatically navigate once 2 seconds have passed
           handleFingerprintButtonPress();
           clearInterval(countdownTimer);
         }
@@ -32,53 +35,61 @@ const SecurityPage = () => {
       });
     }, 1000);
 
-    setTimer(countdownTimer); //save the interval ID to clear it later if needed
+    setTimer(countdownTimer);
   };
 
   const handleMouseUp = () => {
     if (isHolding) {
       setIsHolding(false);
-      clearInterval(timer!); // we clear the timer when the mouse is released
+      if (timer) clearInterval(timer);
     }
   };
 
-  //help button logic
   const handleHelpButtonClick = () => {
     alert("This is the help page. Please hold the fingerprint button for access.");
   };
 
+  const handleBackToHome = () => {
+    navigate("/");
+  };
+
   useEffect(() => {
-    // cleanup interval if the component is unmounted
     return () => {
-      if (timer) {
-        clearInterval(timer);
-      }
+      if (timer) clearInterval(timer);
     };
   }, [timer]);
 
-
   return (
     <div className="security-page">
-    <div className="container">
-    <button onClick={handleHelpButtonClick} className="button">
-      Help
-    </button>
+      <div className="container">
+        <button onClick={handleHelpButtonClick} className="button">
+          Help
+        </button>
 
-    <h1 className="header">Please Hold Touchpad To Unlock</h1>
+        <h1 className="header">Please Hold Touchpad To Unlock</h1>
 
-    <button
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
-      className="fingerprint-button" 
-    >
-    </button>
+        <button
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          className="fingerprint-button"
+        ></button>
 
-    <p className="status-text">
-      {isHolding ? `Scanning Fingerprint, please keep holding...` : ''}
-    </p>
-  </div>
-  </div>
-);
+        <p className="status-text">
+          {isHolding ? `Scanning Fingerprint, please keep holding...` : ''}
+        </p>
+      </div>
+
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup">
+            <h2>Fingerprint Not Found</h2>
+            <p>Authentication failed. Please try again with a valid fingerprint.</p>
+            <button onClick={handleBackToHome}>Back to Home</button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default SecurityPage;
