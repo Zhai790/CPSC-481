@@ -1,0 +1,55 @@
+.search-container {
+  display: flex;
+  flex-direction: column; 
+  gap: 2rem;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  width: 65vw;
+  background-color: white;
+}
+
+.toolbar {
+  display: flex;
+  gap: 1rem;             
+  align-items: center;   
+  justify-content: center; 
+}
+
+
+.voice-container {
+  display: flex;
+  align-items: center;
+}
+
+.mic-icon {
+  color: white;
+  font-size: 40px;
+}
+
+.mic-status {
+  margin-left: 0.5rem;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.simple-keyboard .hg-button {
+  color: black;
+}
+
+.custom-snackbar {
+  right: 350px !important; 
+}
+
+.custom-snackbar .MuiSnackbarContent-root {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 16px;
+  background-color: #f50057;
+}

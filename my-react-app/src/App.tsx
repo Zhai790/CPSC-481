@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Box } from '@mui/material';
 
@@ -9,12 +10,24 @@ import InsightsPage from './pages/InsightsPage';
 import GeneralSettingsPage from "./pages/GeneralSettingsPage";
 import KidsHome from "./pages/KidsHome";
 import Favourites from './pages/Favourites';
+
+import SearchPage from './pages/SearchPage';
+import SearchResults from './pages/SearchResults';
+import ContentFilters from './pages/ContentFilters';
+import ContentDetails from './pages/ContentDetails';
 import TimeLimit from './pages/TimeLimit';
 
 import Remote from './features/remote/components/Remote';
-// import TVScreen from './features/tv/components/TVScreen';
 
 export default function App() {
+  // State for whether the TV screen is on (true = visible; false = black overlay)
+  const [isTVOn, setIsTVOn] = useState(true);
+
+  // Toggle power state when the remote button is pressed
+  const handlePowerToggle = () => {
+    setIsTVOn(prev => !prev);
+  };
+
   return (
     <Router>
       <Box sx={{ display: 'flex', height: '100vh' }}>
@@ -28,7 +41,8 @@ export default function App() {
             justifyContent: 'center',
           }}
         >
-          <Remote />
+          {/* Pass the toggle callback to the Remote component */}
+          <Remote onPowerToggle={handlePowerToggle} />
         </Box>
 
         {/* Right Column: TV Screen UI */}
@@ -38,9 +52,9 @@ export default function App() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            position: 'relative', // Enables absolute positioning for the overlay
           }}
         >
-          {/* Routes for different screens */}
           <Routes>
             <Route path="/" element={<Welcome />} />
             <Route path="/security" element={<SecurityPage />} />
@@ -50,8 +64,27 @@ export default function App() {
             <Route path="/general-settings" element={<GeneralSettingsPage />} />
             <Route path="/child/favourites" element={<Favourites />} />
             <Route path="/kids-home" element={<KidsHome />} />
+            <Route path="/search-page" element={<SearchPage />} />
+            <Route path="/search-results" element={<SearchResults />} />
+            <Route path="/content-filters" element={<ContentFilters />} />
+            <Route path="/content-details" element={<ContentDetails />} />
             <Route path="/time-limit" element={<TimeLimit />} />
           </Routes>
+
+          {/* Black overlay covers the TV screen if isTVOn is false */}
+          {!isTVOn && (
+            <div
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                backgroundColor: 'black',
+                zIndex: 10,
+              }}
+            />
+          )}
         </Box>
       </Box>
     </Router>

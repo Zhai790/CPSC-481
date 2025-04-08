@@ -1,0 +1,32 @@
+/* Container for the whole results page */
+.results-container {
+    padding: 16px; 
+    width: 100%;
+  }
+  
+  /* Heading styling */
+  .result-heading {
+    margin-bottom: 16px;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  /* Each result item */
+  .result-item {
+    padding: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  /* Title inside each result */
+  .result-title {
+    flex: 1;
+  }
+  
+  /* Utility class for buttons to add right margin */
+  .button-margin {
+    margin-right: 8px; 
+  }
+  
