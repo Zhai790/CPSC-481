@@ -17,7 +17,7 @@ const GeneralSettingsPage = () => {
     <h1 className="header">General Settings</h1>
 
     <div className="button-container">
-      <button className="language-region" onClick={() => navigate("/LanguageRegion")}>Language & Region</button> 
+      <button className="language-region" onClick={() => navigate("/language-region")}>Language & Region</button> 
       <button className="display-sound" onClick={() => navigate("/DisplaySound")}>Display & Sound Settings</button>
       <button className="accessibility" onClick={() => navigate("/Accessibility")}>Accessibility Options</button>
       <button className="network" onClick={() => navigate("/Network")}>Network & Connectivity</button>
