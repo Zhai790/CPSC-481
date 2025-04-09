@@ -21,7 +21,7 @@ const ParentHome = () => {
   const series = [
     {
       name: "Watch Time",
-      data: [45, 60, 30, 75, 90]
+      data: [45, 60, 30, 75, 90],
     }
   ];
 
@@ -30,30 +30,38 @@ const ParentHome = () => {
     chart: {
       id: "watch-time-chart",
       type: "line", // must be exact literal
-      toolbar: {
-        show: false
-      }
+      toolbar: { show: false },
+      foreColor: '#ffffff' // makes all default text white
     },
     xaxis: {
       categories: ["28/03/25", "29/03/25", "30/03/25", "31/03/25", "01/04/25"],
       title: {
-        text: "Date"
+        text: "Date",
+        style: { color: '#ffffff' }
       }
     },
     yaxis: {
       title: {
-        text: "Watch Time (minutes)"
+        text: "Watch Time (minutes)",
+        style: { color: '#ffffff' }
       }
     },
     stroke: {
       curve: "smooth"
+    },
+    tooltip: {
+      theme: 'dark', // makes tooltip text black (default is 'dark')
+      style: {
+        fontSize: '14px'
+      }
     },
     dataLabels: {
       enabled: false
     },
     title: {
       text: "Watch Time Over Days",
-      align: "center"
+      align: "center",
+      style: { color: '#ffffff' }
     }
   };
 
