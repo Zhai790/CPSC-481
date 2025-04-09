@@ -1,6 +1,9 @@
 import "/src/pages/css_files/FilteringPage.css";
+import { useNavigate } from 'react-router-dom';
 
 const ContentFilteringPage = () => {
+  const navigate = useNavigate();
+
 
   const handleHelpButtonClick = () => {
     alert("This page allows you to configure content filtering settings.");
@@ -8,6 +11,10 @@ const ContentFilteringPage = () => {
 
   const handleFilterClick = (filterName: string) => {
     alert(`You clicked on: ${filterName}`);
+  };
+
+  const handleSmartFilterClick = () => {
+    navigate('/smartfilter');
   };
 
   return (
@@ -27,8 +34,8 @@ const ContentFilteringPage = () => {
             </div>
           </div>
           <div className="filter-row">
-            <div className="filter-item" onClick={() => handleFilterClick("Filter By Content-Type")}>
-              Filter By Content-Type
+            <div className="filter-item" onClick={handleSmartFilterClick}>
+              SmartFilter
             </div>
             <div className="filter-item" onClick={() => handleFilterClick("Current Filters")}>
               Current Filters

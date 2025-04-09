@@ -59,7 +59,7 @@ const ParentHome = () => {
       enabled: false
     },
     title: {
-      text: "Watch Time Over Days",
+      text: "Child's Watch Time Over Days",
       align: "center",
       style: { color: '#ffffff' }
     }
