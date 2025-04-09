@@ -12,6 +12,7 @@ const NotificationsPage = () => {
   };
 
   return (
+    <div className="notifications-holder">
     <div className="notifications-page">
       <button className="help-button" onClick={handleHelpClick}>Help</button>
 
@@ -26,6 +27,7 @@ const NotificationsPage = () => {
         ))}
         <div className="down-arrow">⬇</div>
       </div>
+    </div>
     </div>
   );
 };

@@ -10,23 +10,7 @@
     text-align: center;
   }
   
-  /* Back Button: Positioned at the top right */
-  .parent-home .back-button {
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .parent-home .back-button:hover {
-    background-color: #0056b3;
-  }
-  
+
   /* welcome Message*/
   .parent-home .welcome-message {
     font-size: 24px;
@@ -34,21 +18,13 @@
   }
   
   /* image Container to display the image */
-  .parent-home .image-container {
-    width: 80%;
-    max-width: 600px;
-    margin-bottom: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  /* Image */
-  .parent-home .image {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+  /* chart Container */
+.parent-home .chart-container {
+  width: 90%;         /* Adjusted to be wider */
+  max-width: 800px;   /* Increased max width */
+  margin-bottom: 20px;
+}
+
   
   /* button Container: Positioned beneath the image */
   .parent-home .button-container {

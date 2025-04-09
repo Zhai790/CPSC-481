@@ -1,4 +1,4 @@
-.notifications-page {
+.notifications-holder .notifications-page {
     background-color: #242424;
     min-height: 100vh;
     padding: 2rem;
@@ -8,13 +8,13 @@
     align-items: center;
   }
   
-  .notifications-header {
+  .notifications-holder .notifications-header {
     font-size: 1.8rem;
     margin-bottom: 2rem;
   }
   
   
-  .notifications-container {
+  .notifications-holder .notifications-container {
     width: 100%;
     max-width: 900px;
     background: white;
@@ -23,7 +23,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
-  .notification-entry {
+  .notifications-holder .notification-entry {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
@@ -35,7 +35,7 @@
     color: black;
   }
   
-  .down-arrow {
+  .notifications-holder .down-arrow {
     color: black;
     text-align: center;
     font-size: 1.5rem;
