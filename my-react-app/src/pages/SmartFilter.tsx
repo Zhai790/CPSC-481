@@ -9,6 +9,7 @@ const AutofilterPage = () => {
     sexualScenes: false,
     foulLanguage: false,
     excessiveViolence: false,
+    harmfulToDevelopment: false,
   });
 
   // Handle toggle for autofilter
@@ -48,7 +49,7 @@ const AutofilterPage = () => {
 
       {/* List of content filters */}
       <div>
-        {(['sexualScenes', 'foulLanguage', 'excessiveViolence'] as const).map((filter) => (
+        {(['sexualScenes', 'foulLanguage', 'excessiveViolence', 'harmfulToDevelopment'] as const).map((filter) => (
           <div
             key={filter}
             style={{
@@ -61,6 +62,7 @@ const AutofilterPage = () => {
               {filter === 'sexualScenes' && 'Block content detected to contain sexual scenes'}
               {filter === 'foulLanguage' && 'Block content detected to contain foul language'}
               {filter === 'excessiveViolence' && 'Block content detected to contain excessive violence'}
+              {filter === 'harmfulToDevelopment' && 'Block content detected to be harmful to development in children'}
             </span>
             <button
               onClick={() => handleFilterToggle(filter)} // No need for type casting here anymore
