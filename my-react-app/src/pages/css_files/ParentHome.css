@@ -1,6 +1,6 @@
 /* page Container: Center everything */
   .parent-home .page-container {
-    display: flex;
+    display: inline;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@
   /* image Container to display the image */
   /* chart Container */
 .parent-home .chart-container {
-  width: 90%;         /* Adjusted to be wider */
+  width: 200%;         /* Adjusted to be wider */
   max-width: 800px;   /* Increased max width */
   margin-bottom: 20px;
 }
@@ -30,7 +30,7 @@
   .parent-home .button-container {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
     max-width: 600px;
   }
   
