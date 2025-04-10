@@ -1,0 +1,108 @@
+body, html, #root {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .favourites-container {
+    padding: 2rem;
+    background-color: #fefefe;
+    min-height: 100vh;
+    color: hsl(0, 0%, 0%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .favourites-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .show-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 1000px; /* stretched wider than before */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  .thumbnail {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin-right: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .show-details {
+    flex-grow: 1;
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+  
+  .show-details strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .play-button {
+    background-color: #d5b3ff;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .delete-button {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .back-home-button {
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+
