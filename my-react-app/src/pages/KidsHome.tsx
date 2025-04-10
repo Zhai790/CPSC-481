@@ -6,6 +6,8 @@ import DownloadIcon from '@mui/icons-material/Download';
 import SearchIcon from '@mui/icons-material/Search';
 import "/src/pages/css_files/KidsHome.css";
 import { useNavigate } from 'react-router-dom';
+import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { useState } from 'react';
 
 
   interface Show {
@@ -26,8 +28,33 @@ import { useNavigate } from 'react-router-dom';
       { id: 4, title: 'Show 4' },
     ];
 
+    let [isOpen, setIsOpen] = useState(false);
+
+    const limit = () => {
+      setIsOpen(true);
+    }
+
+    const timeLimitButton = () => {
+      setIsOpen(false)
+      navigate("/ ")
+    }
+
   return (
     <Box className="child-home-container">
+      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-1000">
+        <div className="fixed inset-0">
+          <DialogPanel className="max-w-lg space-y-4 border bg-white p-12">
+            <DialogTitle className="font-bold">Limit Reached</DialogTitle>
+              <Description>"Sorry buddy no more screen time until after dinner"</Description>
+                    
+              <div className="flex gap-4">
+                <button onClick={timeLimitButton}>OK</button>
+              </div>
+          </DialogPanel>
+        </div>
+      </Dialog>
+
+      <button className="time-limit-box" onClick={limit}>Current Time Limit : 3 Hours</button>
       {/* Title */}
       <Typography sx={{ fontSize: '3rem', fontWeight: 'bold' }}>Recently Watched</Typography>
 
@@ -82,7 +109,7 @@ import { useNavigate } from 'react-router-dom';
         </Button>
       </Box>
     </Box>
-
+    
   );
 };
 
