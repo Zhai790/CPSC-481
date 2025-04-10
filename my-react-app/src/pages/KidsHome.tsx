@@ -7,24 +7,29 @@ import SearchIcon from '@mui/icons-material/Search';
 import "/src/pages/css_files/KidsHome.css";
 import { useNavigate } from 'react-router-dom';
 
+import show1Img from '/src/assets/bluey-pictures-wceyl8vyayvezbct.webp';
+import show2Img from '/src/assets/Cocomelon.jpg';
+import show3Img from '/src/assets/image_ab1efa4f.webp';
+import show4Img from '/src/assets/p492370_b_h10_ag.webp';
+interface Show {
+  id: number;
+  title: string;
+  image: string;
+}
 
-  interface Show {
-    id: number;
-    title: string;
-  }
-  
-  const ChildHome: React.FC = () => {
-    const navigate = useNavigate();
+const ChildHome: React.FC = () => {
+  const navigate = useNavigate();
 
-    const handleSearchButtonClick = () => {
-      navigate('/search-page');
-    };
-    const recentShows: Show[] = [
-      { id: 1, title: 'Show 1' },
-      { id: 2, title: 'Show 2' },
-      { id: 3, title: 'Show 3' },
-      { id: 4, title: 'Show 4' },
-    ];
+  const handleSearchButtonClick = () => {
+    navigate('/search-page');
+  };
+
+  const recentShows: Show[] = [
+    { id: 1, title: 'Show 1', image: show1Img },
+    { id: 2, title: 'Show 2', image: show2Img },
+    { id: 3, title: 'Show 3', image: show3Img },
+    { id: 4, title: 'Show 4', image: show4Img },
+  ];
 
   return (
     <Box className="child-home-container">
@@ -43,46 +48,36 @@ import { useNavigate } from 'react-router-dom';
       >
         {recentShows.map((show) => (
           <Box key={show.id} className="recently-watched-box">
-            {show.title}
+            <img src={show.image} alt={show.title} className="carousel-image" />
+            <Typography className="carousel-title">{show.title}</Typography>
           </Box>
         ))}
       </Carousel>
 
       {/* Bottom Navigation */}
       <Box className="bottom-nav" sx={{ marginTop: '2rem', display: 'flex', gap: '2rem' }}>
-        {/* FAV Button with Vertical Layout */}
         <Button
           variant="outlined"
           sx={{
-            borderColor: '#FFD700',     // Gold outline
-
-            color: '#FFD700',           // Gold color for icon and text
-
+            borderColor: '#FFD700',
+            color: '#FFD700',
             display: 'flex',
-            flexDirection: 'column',    // Stack icon above text
+            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             padding: '4rem',
             fontSize: '4rem',
           }}
-          onClick={() => navigate('/child/favourites')}  // Navigate to Favourites page
+          onClick={() => navigate('/child/favourites')}
         >
           <StarIcon sx={{ fontSize: '5rem' }} />
-          <Typography sx={{ fontSize: '1rem', marginTop: '0.5rem' }}>
-            Fav
-          </Typography>
+          <Typography sx={{ fontSize: '1rem', marginTop: '0.5rem' }}>Fav</Typography>
         </Button>
 
-
-        <Button variant="outlined" startIcon={<DownloadIcon />}>
-          Downloads
-        </Button>
-        <Button variant="outlined" startIcon={<SearchIcon />} onClick={handleSearchButtonClick}>
-          Search
-        </Button>
+        <Button variant="outlined" startIcon={<DownloadIcon />}>Downloads</Button>
+        <Button variant="outlined" startIcon={<SearchIcon />} onClick={handleSearchButtonClick}>Search</Button>
       </Box>
     </Box>
-
   );
 };
 
