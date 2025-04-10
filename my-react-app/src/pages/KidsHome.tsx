@@ -103,8 +103,12 @@ import show4Img from '/src/assets/p492370_b_h10_ag.webp';
           </Typography>
         </Button>
 
-
-        <Button variant="outlined" startIcon={<DownloadIcon />}>
+        {/* Modified Downloads Button with onClick Navigation */}
+        <Button
+          variant="outlined"
+          startIcon={<DownloadIcon />}
+          onClick={() => navigate('/download')}
+        >
           Downloads
         </Button>
         <Button variant="outlined" startIcon={<SearchIcon />} onClick={handleSearchButtonClick}>

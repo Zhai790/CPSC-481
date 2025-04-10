@@ -25,6 +25,7 @@ import Storage from './pages/Storage';
 import SecuritySettings from './pages/SecuritySettings';
 import Notifications from './pages/Notifications';
 import SmartFilter from './pages/SmartFilter';
+import DownloadPage from './pages/DownloadPage';
 
 import Remote from './features/remote/components/Remote';
 
@@ -88,6 +89,9 @@ export default function App() {
             <Route path="/storage" element={<Storage />} />
             <Route path="/notifications" element={<Notifications />} />
             <Route path="/smartfilter" element={<SmartFilter />} />
+            <Route path="/download" element={<DownloadPage />} />
+
+
           </Routes>
 
           {/* Black overlay covers the TV screen if isTVOn is false */}

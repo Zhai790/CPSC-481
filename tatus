@@ -1,0 +1,14 @@
+[33m65ffb76[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mSaif[m[33m, [m[1;31morigin/Saif[m[33m)[m Updated DownloadPage with kid-friendly images and descriptions
+[33md8af34e[m[33m ([m[1;31morigin/Michael_New[m[33m, [m[1;32mMichael_New[m[33m)[m Merge branch 'Lucas_Toews' into Michael_New
+[33ma440e25[m Time limit page added
+[33m8f5398b[m Update KidsHome.tsx
+[33m49fba57[m Add Favourites feature to Child UI with navigation and large star icon
+[33meeaf1ab[m Added child home
+[33m228e3aa[m Merge pull request #6 from Zhai790/master
+[33m6e9714f[m Setting up Kids home page
+[33m920a856[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m Chris nielsen (#5)
+[33ma98a16d[m Remote design changes (#4)
+[33m666e5e4[m Base setup + remote integration (#3)
+[33m3b3df1c[m Created React + Vite App (#2)
+[33m820256f[m Create README.md (#1)
+[33m72dcff9[m Create Test: testing out new file upload
