@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button, Card, CardContent, Typography, Box } from '@mui/material';
-import { Link } from 'react-router-dom';
 
 interface DownloadedContent {
   id: string;
@@ -51,7 +50,7 @@ export default function DownloadPage() {
     <Box
       sx={{
         minHeight: '100vh',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#242424',
         p: 4,
         width: '100%',
         maxWidth: '1200px',
