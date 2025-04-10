@@ -67,7 +67,7 @@ import { useNavigate } from 'react-router-dom';
           }}
           onClick={() => navigate('/child/favourites')}  // Navigate to Favourites page
         >
-          <StarIcon sx={{ fontSize: '5rem' }} />
+          <StarIcon sx={{ fontSize: '4rem' }} />
           <Typography sx={{ fontSize: '1rem', marginTop: '0.5rem' }}>
             Fav
           </Typography>
