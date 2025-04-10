@@ -12,6 +12,7 @@ import {
 } from '@mui/icons-material';
 import { makeStyles } from '@mui/styles';
 import { useState } from 'react';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 interface RemoteProps {
   onPowerToggle: () => void;
@@ -83,13 +84,20 @@ const useStyles = makeStyles(() => ({
   },
   homeButton: {
     position: 'absolute',
-    top: 75,
+    top: 25,
     width: 75,
     height: 75,
     left: '20%',
     '& svg': {
       fontSize: 40,
     },
+  },
+  menuButton: {
+    position: 'absolute', 
+    bottom: 10, 
+    right: '18%',
+    width: 50, 
+    height: 50
   },
   touchpadContainer: {
     position: 'absolute',
@@ -136,6 +144,11 @@ export default function Remote({ onPowerToggle }: RemoteProps) {
     console.log('Volume Down:', volume - 1);
   };
 
+  const handleGoToWelcome = () => {
+    console.log('Go to Welcome screen');
+    navigate('/');
+  };    
+
   const handleHome = () => {
     const userType = localStorage.getItem('userType');
 
@@ -181,6 +194,14 @@ export default function Remote({ onPowerToggle }: RemoteProps) {
           <VolumeDownIcon />
         </IconButton>
       </Box>
+
+      {/* Return to main menu between parent and child */}
+      <IconButton
+        className={`${classes.buttonBase} ${classes.menuButton}`}
+        onClick={handleGoToWelcome}
+      >
+        <ExitToAppIcon /> 
+      </IconButton>
 
       {/* Home Button */}
       <IconButton className={`${classes.buttonBase} ${classes.homeButton}`} onClick={handleHome}>
