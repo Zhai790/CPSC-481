@@ -43,13 +43,13 @@
 }
 
 .subscriptions-page .subscription-table thead {
-  color: black;
-  background-color: #f3f4f6;
+  color: white;
+  background-color: #28a745;
 }
 
 .subscriptions-page .payment-info {
-  background: #f3f4f6;
-  color: black;
+  background: #28a745;
+  color: white;
   padding: 1rem;
   text-align: center;
   font-size: 1.2rem;
