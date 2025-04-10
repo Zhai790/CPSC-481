@@ -7,14 +7,10 @@ const notifications = [
 
 const NotificationsPage = () => {
 
-  const handleHelpClick = () => {
-    alert("This page shows recent notifications about your child's activity.");
-  };
 
   return (
     <div className="notifications-holder">
     <div className="notifications-page">
-      <button className="help-button" onClick={handleHelpClick}>Help</button>
 
       <h1 className="notifications-header">Notifications</h1>
 
@@ -27,6 +23,7 @@ const NotificationsPage = () => {
         ))}
         <div className="down-arrow">⬇</div>
       </div>
+      <button className="help-button">Help</button>
     </div>
     </div>
   );

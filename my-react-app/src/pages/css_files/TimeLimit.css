@@ -73,7 +73,7 @@
     right: 10px;
     padding: 8px 15px;
     font-size: 14px;
-    background-color: #1a1a1a;
+    background-color: #ff5555;
     color: white;
     border: none;
     border-radius: 8px;
@@ -95,13 +95,13 @@
   }
   
   /* Dialog panel */
-  .max-w-lg {
-    width: 100%;
-    max-width: 500px;
-    position: absolute;
-    left: 40%;
-    right: 20%
-  }
+.max-w-lg {
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  left: 43%;
+  right: 10%;
+}
   
   .space-y-4 {
     margin-bottom: 16px;

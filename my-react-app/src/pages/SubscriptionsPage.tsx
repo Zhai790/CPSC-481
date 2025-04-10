@@ -15,7 +15,7 @@ const SubscriptionsPage = () => {
     <div className="subscriptions-page">
       <div className="container">
         <div className="content">
-          <button onClick={handleHelpButtonClick} className="button">Help</button>
+          <button onClick={handleHelpButtonClick} className="help-button">Help</button>
           
           <h1 className="header">Subscriptions</h1>
           

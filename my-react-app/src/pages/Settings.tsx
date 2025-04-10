@@ -4,10 +4,6 @@ import './css_files/Settings.css';
 const Settings = () => {
   const navigate = useNavigate();
 
-  // navigation logic for the help button
-  const handleHelpButtonClick = () => {
-    alert("This is the help page. You can configure your settings here.");
-  };
 
   // button click handlers for each of the settings options
   const handleContentFilteringClick = () => {
@@ -29,8 +25,6 @@ const Settings = () => {
   return (
     <div className="settings-page">
     <div className="container">
-      <button onClick={handleHelpButtonClick} className="button">Help</button>
-
       <h1 className="header">Settings</h1>
 
       <div className="button-container">
@@ -47,6 +41,7 @@ const Settings = () => {
           General Settings
         </button>
       </div>
+      <button className="help-button">Help</button>
     </div>
     </div>
   );
