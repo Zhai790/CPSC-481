@@ -137,8 +137,15 @@ export default function Remote({ onPowerToggle }: RemoteProps) {
   };
 
   const handleHome = () => {
-    console.log('Home button clicked');
-    navigate('/kids-home');
+    const userType = localStorage.getItem('userType');
+
+    if (userType === 'parent') {
+      navigate('/parent-home'); 
+    } else if (userType === 'child') {
+      navigate('/kids-home');
+    } else {
+      navigate('/'); // Fallback: welcome screen
+    }
   };
 
   const handleTouchpadClick = () => {
