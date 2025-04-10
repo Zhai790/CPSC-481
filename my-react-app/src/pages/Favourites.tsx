@@ -1,53 +1,47 @@
 import React, { useState } from 'react';
-import { Box, Typography, Button } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
+import './css_files/Favourites.css';
 
 const Favourites: React.FC = () => {
-  // State for the favourite shows
   const [favouriteShows, setFavouriteShows] = useState([
-    { id: 1, title: 'Bluey' },
-    { id: 2, title: 'Paw Patrol' },
-    { id: 3, title: 'SpongeBob SquarePants' },
+    { id: 1, title: 'Bluey', duration: '22:45', thumbnail: '/assets/bluey.jpg' },
+    { id: 2, title: 'Paw Patrol', duration: '18:30', thumbnail: '/assets/pawpatrol.jpg' },
+    { id: 3, title: 'SpongeBob SquarePants', duration: '15:20', thumbnail: '/assets/spongebob.jpg' },
   ]);
 
-  // Remove a show by its id
   const removeShow = (id: number) => {
-    setFavouriteShows((prevShows) => prevShows.filter((show) => show.id !== id));
+    setFavouriteShows((prev) => prev.filter((show) => show.id !== id));
   };
 
   return (
-    <Box sx={{ padding: '2rem' }}>
-      {/* Header with Star Icon */}
-      <Typography
-        variant="h3"
-        sx={{ marginBottom: '1rem', display: 'flex', alignItems: 'center' }}
-      >
-        <StarIcon sx={{ marginRight: '0.5rem' }} />
+    <div className="favourites-container">
+      <div className="favourites-header">
+        <StarIcon style={{ marginRight: '0.5rem' }} />
         Favourites Page
-      </Typography>
+      </div>
 
-      {/* If no favourites, show a message; otherwise list them */}
       {favouriteShows.length === 0 ? (
-        <Typography>No favourites yet!</Typography>
+        <p>No favourites yet!</p>
       ) : (
-        <Box>
+        <>
           {favouriteShows.map((show) => (
-            <Box key={show.id} sx={{ marginBottom: '1rem' }}>
-              <Typography variant="h5" sx={{ display: 'inline-block', marginRight: '1rem' }}>
-                {show.title}
-              </Typography>
-              <Button
-                variant="outlined"
-                color="error"
-                onClick={() => removeShow(show.id)}
-              >
-                Remove
-              </Button>
-            </Box>
+            <div key={show.id} className="show-card">
+              <img src={show.thumbnail} alt={show.title} className="thumbnail" />
+              <div className="show-info">
+                <strong>{show.title}</strong>
+                <div>Duration: {show.duration}</div>
+              </div>
+              <div className="button-stack">
+                <button className="play-button">Play</button>
+                <button className="delete-button" onClick={() => removeShow(show.id)}>
+                  Delete
+                </button>
+              </div>
+            </div>
           ))}
-        </Box>
+        </>
       )}
-    </Box>
+    </div>
   );
 };
 
