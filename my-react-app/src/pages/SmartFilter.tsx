@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const AutofilterPage = () => {
   // State for enabling the autofilter
@@ -12,23 +12,36 @@ const AutofilterPage = () => {
     harmfulToDevelopment: false,
   });
 
+  // ✅ Load saved filters from localStorage on first render
+  useEffect(() => {
+    const savedAutofilter = JSON.parse(localStorage.getItem('isAutofilterEnabled') || 'false');
+    const savedFilters = JSON.parse(localStorage.getItem('filters') || '{}');
+
+    setIsAutofilterEnabled(savedAutofilter);
+    setFilters((prevFilters) => ({ ...prevFilters, ...savedFilters }));
+  }, []);
+
   // Handle toggle for autofilter
   const handleAutofilterToggle = () => {
-    setIsAutofilterEnabled(!isAutofilterEnabled);
+    const newValue = !isAutofilterEnabled;
+    setIsAutofilterEnabled(newValue);
+    localStorage.setItem('isAutofilterEnabled', JSON.stringify(newValue));
   };
 
-  // Handle individual filter toggle, specify type for 'filter'
+  // Handle individual filter toggle
   const handleFilterToggle = (filter: keyof typeof filters) => {
-    setFilters({
+    const updatedFilters = {
       ...filters,
       [filter]: !filters[filter],
-    });
+    };
+    setFilters(updatedFilters);
+    localStorage.setItem('filters', JSON.stringify(updatedFilters));
   };
 
   return (
     <div style={{ padding: '20px' }}>
       <h1>Autofilter</h1>
-      
+
       {/* Enable Autofilter section */}
       <div style={{ marginBottom: '20px' }}>
         <span>Enable Autofilter</span>
@@ -54,8 +67,8 @@ const AutofilterPage = () => {
             key={filter}
             style={{
               marginBottom: '10px',
-              opacity: isAutofilterEnabled ? 1 : 0.5, // Grey out if autofilter is off
-              pointerEvents: isAutofilterEnabled ? 'auto' : 'none', // Disable interactions when off
+              opacity: isAutofilterEnabled ? 1 : 0.5,
+              pointerEvents: isAutofilterEnabled ? 'auto' : 'none',
             }}
           >
             <span style={{ marginRight: '10px' }}>
@@ -65,7 +78,7 @@ const AutofilterPage = () => {
               {filter === 'harmfulToDevelopment' && 'Block content detected to be harmful to development in children'}
             </span>
             <button
-              onClick={() => handleFilterToggle(filter)} // No need for type casting here anymore
+              onClick={() => handleFilterToggle(filter)}
               style={{
                 padding: '5px 10px',
                 backgroundColor: filters[filter] ? 'green' : 'red',
