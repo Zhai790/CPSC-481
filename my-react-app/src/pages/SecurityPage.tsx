@@ -62,7 +62,7 @@ const SecurityPage = () => {
   return (
     <div className="security-page">
       <div className="container">
-        <button onClick={handleHelpButtonClick} className="button">
+        <button onClick={handleHelpButtonClick} className="help-button">
           Help
         </button>
 

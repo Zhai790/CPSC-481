@@ -37,6 +37,7 @@ const ContentFilteringPage = () => {
             </div>
           </div>
         </div>
+        <button className="help-button">Help</button>
       </div>
     </div>
   );
