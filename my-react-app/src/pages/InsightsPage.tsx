@@ -2,18 +2,10 @@ import '/src/pages/css_files/Insights.css';
 
 const InsightsPage = () => {
 
-  //help button produces an alert message
-  const handleHelpButtonClick = () => {
-    alert("This page provides insights into viewing habits and content usage.");
-  };
-
   return (
     <div className="insights-page">
     <div className="container">
 
-      <button onClick={handleHelpButtonClick} className="button">
-        Help
-      </button>
 
       <h1 className="header">Insights</h1>
 
@@ -47,6 +39,7 @@ const InsightsPage = () => {
           </tr>
         </tbody>
       </table>
+      <button className="help-button">Help</button>
     </div>
     </div>
   );

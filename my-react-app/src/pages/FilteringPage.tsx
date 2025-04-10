@@ -5,10 +5,6 @@ const ContentFilteringPage = () => {
   const navigate = useNavigate();
 
 
-  const handleHelpButtonClick = () => {
-    alert("This page allows you to configure content filtering settings.");
-  };
-
   const handleFilterClick = (filterName: string) => {
     alert(`You clicked on: ${filterName}`);
   };
@@ -20,7 +16,6 @@ const ContentFilteringPage = () => {
   return (
     <div className="filtering-page">
       <div className="filter-container">
-        <button onClick={handleHelpButtonClick} className="button">Help</button>
         
         <h1 className="header">Content Filtering Settings</h1>
         

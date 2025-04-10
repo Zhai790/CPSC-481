@@ -84,6 +84,7 @@ const ParentHome = () => {
           <button onClick={handleSettingsButtonClick} className="button">Settings</button>
           <button onClick={handleNotificationsButtonClick} className="button">Notifications</button>
         </div>
+        <button className="help-button">Help</button>
       </div>
     </div>
   );

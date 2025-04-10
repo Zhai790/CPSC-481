@@ -42,7 +42,7 @@
 }
 
 .insights-page .table th {
-  background-color: #4e4e4e;
+  background-color: #28a745;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
@@ -52,3 +52,16 @@
 .insights-page .table tr:not(:last-child) td {
   border-bottom: 1px solid #ccc;
 }
+
+.help-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 15px;
+  font-size: 14px;
+  background-color: #ff5555;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
